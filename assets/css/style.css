@@ -1,0 +1,22 @@
+.nav-name {
+    margin-left: 25px;
+    font-size: large;
+}
+
+.about-me {
+    margin-top: 25px;
+}
+.ray-img {
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px grey;
+}
+
+.about-title {
+    margin-left: 10px;
+}
+
+.about-text {
+    margin: 1rem;
+}
