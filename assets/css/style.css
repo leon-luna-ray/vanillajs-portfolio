@@ -13,8 +13,12 @@
     box-shadow: 3px 3px grey;
 }
 
-.about-title {
-    margin-left: 10px;
+.section-title {
+    margin-left: 20px;
+}
+
+.about-section {
+    margin-top: 25px;
 }
 
 .about-text {
