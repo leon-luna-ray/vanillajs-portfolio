@@ -22,18 +22,10 @@
   
   HTML,CSS,Javascript
 
-  ## Known-Bugs
-
-  n/a
 
   ## Next-Steps
 
   Continue building functionality and styling.
-
-  ## License
-
-  This project is licensed under the [None]() license.
-  
 
   ## Contact
 
@@ -45,7 +37,7 @@
 
   ## Links
 
-  - [Deployed Project](https://leon-luna-ray.github.io/portfolio/) 
+  - [Portfolio](https://leon-luna-ray.github.io/portfolio/) 
 
   - [Project Repository](https://github.com/leon-luna-ray/portfolio)
 
