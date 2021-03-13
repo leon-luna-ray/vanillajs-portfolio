@@ -2,48 +2,14 @@ img {
     box-shadow: 3px 3px grey;
 }
 
-.divider {
-    margin-top: 10px;
-    margin-bottom: 15px;
+.feature-card {
+    padding: 3rem;
 }
 
-.nav-name {
-    margin-left: 25px;
-    font-size: large;
+#about-text {
+    margin-left: 3rem;
 }
 
-.about-me {
-    margin-top: 25px;
-}
-.ray-img {
-    float: left;
-    margin-right: 50px;
-    margin-bottom: 10px;
-}
-
-.section-title {
-    margin-left: 20px;
-}
-
-.about-section {
-    margin-top: 25px;
-}
-
-.about-text {
-    margin: 1rem;
-}
-
-.project {
-    border: 1px solid red;
-
-}
-
-.featured-project {
-    border: 1px;
-    padding: 1.5rem;
-}
-.featured-project-img {
-    width: 50%;
-    float: right;
-    margin: 1rem;
+#ray-img {
+    margin-top: 2rem;
 }
