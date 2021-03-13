@@ -1,3 +1,7 @@
+img {
+    box-shadow: 3px 3px grey;
+}
+
 .divider {
     margin-top: 10px;
     margin-bottom: 15px;
@@ -15,7 +19,6 @@
     float: left;
     margin-right: 50px;
     margin-bottom: 10px;
-    box-shadow: 3px 3px grey;
 }
 
 .section-title {
@@ -27,5 +30,20 @@
 }
 
 .about-text {
+    margin: 1rem;
+}
+
+.project {
+    border: 1px solid red;
+
+}
+
+.featured-project {
+    border: 1px;
+    padding: 1.5rem;
+}
+.featured-project-img {
+    width: 50%;
+    float: right;
     margin: 1rem;
 }
