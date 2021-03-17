@@ -4,7 +4,7 @@
   } */
 
 body {
-  font-size: 1vw;
+  font-size: 1.7vw;
 }
 
 .fixed {
@@ -15,15 +15,15 @@ body {
 }
 
 .feature-card {
-    padding: 3rem;
+    padding: 3vw;
 }
 
 .about-text {
-    margin-left: 3rem;
+    margin-left: 3vw;
 }
 
 .feature-img {
-    margin-top: 2rem;
+    margin-top: 2vw;
 }
 
 /* @media only screen and (max-width: 600px) {
