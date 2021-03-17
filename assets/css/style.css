@@ -1,7 +1,18 @@
-.flex {
+/* .flex {
     display: flex;
     flex-wrap: wrap;
-  }
+  } */
+
+body {
+  font-size: 1vw;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
 
 .feature-card {
     padding: 3rem;
@@ -15,9 +26,9 @@
     margin-top: 2rem;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .col {
       display: block;
       width: 100%;
     }
-  }
+  } */
