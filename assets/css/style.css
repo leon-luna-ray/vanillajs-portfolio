@@ -36,6 +36,10 @@ body {
     margin-top: 2vw;
 }
 
+.contact-icons {
+  margin-bottom: 1rem;
+}
+
 /* @media only screen and (max-width: 600px) {
     .col {
       display: block;
