@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <!-- Google Fonts Material icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize CSS -->
@@ -14,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Ray Luna | Portfolio</title>
 </head>
+
 <body>
     <div class="fixed">
         <nav class="nav red accent-3">
@@ -32,170 +38,245 @@
     <main>
         <div class="container">
             <!-- include another div for more an intro and what you are looking for, then go to the about me-->
-            <div id="about-section" class="section ">
+            <section id="about-section" class="section ">
                 <div class="section-title row">
                     <h1 class="title-text about-title center-align">About Me</h1>
                 </div> <!-- section-title -->
 
                 <div class="feature-card card-panel hoverable">
                     <div class="feature-content row">
-                        <div id="ray-img" class=" feature-img col s12 m4" >
+                        <div id="ray-img" class=" feature-img col s12 m4">
                             <img class=" responsive-img" src="./assets/images/ray-1.jpg" alt="Ray Luna img">
                         </div>
-                        
+
                         <div id="about-info" class="feature-info col s12 m8">
-                            <h3 class="about-text">Hello world!</h3>
+                            <h3 class="about-text">Hello world! 🌎</h3>
                             <p class="about-text" class="feature-text ">
-                                I'm Ray. I'm a full-stack web developer and currently a student with University of Oregon's Coding Boot Camp. The reason I got into coding is because find it allows me to constantly challenge myself. I love to learn and I'm always looking for something new to expand my knowledge. I have an interest in both front-end and back-end development and learning new languages and technologies.
+                                I'm Ray. I am a Full-stack web developer and recently earned my certificate in full
+                                stack development from the University of Oregon. I use my new skills to create useful
+                                human-centric web applications with an emphasis on ease of use and simple design.
                                 <br><br>
-                                Originally from Mexicali, Mexico and currently living in the Portland, Oregon metro area. My hobbies are cooking, language, travel and photography.
+                                The reason I got into coding is because find it allows me to constantly challenge
+                                myself. I love to learn and I'm always looking for something new to expand my knowledge
+                                that I can apply to find real-world solutions. I have an interest in both front-end and
+                                back-end development, learning new languages and technologies.
+                                <br><br>
+                                Originally from Mexicali, Mexico and currently living in the Portland, Oregon metro
+                                area. My hobbies are camping, hiking, birdwatching, cooking, language, travel and
+                                photography.
                             </p>
                         </div>
                     </div> <!-- feature-content -->
                 </div> <!-- feature card-->
-            </div> <!-- about-section-->
+            </section> <!-- about-section-->
 
-            <div id="project-section" class="section">
+            <section id="skills-section" class="section ">
                 <div class="section-title row">
-                    <h1 class="title-text about-title center-align">Projects</h1>
+                    <h1 class="title-text about-title center-align">Skills</h1>
                 </div> <!-- section-title -->
 
                 <div class="feature-card card-panel hoverable">
                     <div class="feature-content row">
-                        <div class="feature-info col s12 m6">
-                            <h2 class="feature-title">
-                                RecipeBook
-                            </h2>
-                            <p class="feature-text ">
-                                An online recipe book to view sand save your favorite recipes. This is a Heroku app built using Node.js, Express, Handlebars, Sequelize, Passport and Materialize.
-                            </p>
-                            <p class="feature-text">
-                                The application allows the user to create an account, add recipes, view recipes, search stored recipes and print the recipe.
-                            </p>
-                        </div> <!-- feature-info-->
-
-                        <div class="feature-img col s12 m6">
-                            <img class="card responsive-img" src="./assets/images/recipe-book.png" alt="recipe-book">
-                        </div> <!-- feature-img -->
-                    </div> <!-- feature-content -->
-
-                    <div class="card-action">
-                        <a href="https://arcane-peak-55315.herokuapp.com/" target="_blank">Application</a>
-                        <a href="https://github.com/kurtp23/recipe-book" target="_blank">GitHub Repository</a>
-                    </div>
-                </div> <!-- feature card-->
-
-                <div class="feature-card card-panel hoverable">
-                    <div class="feature-content row">
-                        <div class="feature-info col s12">
-                            <h2 class="feature-title">
-                                ReadMe Generator
-                            </h2>
-                            <p class="feature-text ">
-                                A command line application to seamlessly create a new ReadMe file for your projects quickly! This application will ask you all the right questions to generate a professional quality readme.
-                            </p>
-
-                            <p>
-                                This app is built using Node.js and Inquirer npm.
-                            </p>
-                        </div> <!-- feature-info-->
-
-                        <div class="feature-image-hr">
-                            <img src="./assets/images/readme-app.png" alt="Terminal displaying app" class="card responsive-img">
+                            <div class="col s4">
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>jQuery</li>
+                                </ul>
+                            </div>
+                            <div class="col s4">
+                                <ul>
+                                    <li>Node.js</li>
+                                    <li>Express.js</li>
+                                    <li>React.js</li>
+                                    <li>Handlebars</li>
+                                </ul>
+                            </div>
+                            <div class="col s4">
+                                <ul>
+                                    <li>MySQL</li>
+                                    <li>MongoDb</li>
+                                    <li>MERN Stack</li>
+                                    <li>Firebase</li>
+                                </ul>
+                            </div>
                         </div>
-
-
                     </div> <!-- feature-content -->
-
-                    <div class="card-action">
-                        <a href="https://www.youtube.com/watch?v=XI6C2lgj540" target="_blank">Application Demo</a>
-                        <a href="https://github.com/leon-luna-ray/hw09-readme-generator" target="_blank">GitHub Repository</a>
-                    </div>
                 </div> <!-- feature card-->
+            </section> <!-- skills-section-->
 
-                <div class="project-cards row flex card">
-                    <div class="col s12 m6">
-                      <div class="project-card hoverable card-panel">
+        <section id="project-section" class="section">
+            <div class="section-title row">
+                <h1 class="title-text about-title center-align">Projects</h1>
+            </div> <!-- section-title -->
+
+            <div class="feature-card card-panel hoverable">
+                <div class="feature-content row">
+                    <div class="feature-info col s12">
+                        <h2 class="feature-title">
+                            Social Butterfly Messenger
+                        </h2>
+                        <p class="feature-text ">
+                            This is a messenger app for keeping in touch with friends and family and to me new people! This app allows the user to create an account, search users by username and add new contacts. The public chat allows each user to communicate with other members of the Social Butterfly Community. This app is built on a serverless architecture using React and Firebase.
+                        </p>
+                    </div> <!-- feature-info-->
+
+                    <div class="feature-image-hr">
+                        <img src="./assets/images/social-butterfly.png" alt="Social Butterfly Messenger"
+                            class="card responsive-img">
+                    </div>
+
+
+                </div> <!-- feature-content -->
+
+                <div class="card-action">
+                    <a href="https://messenger-app-rsl.herokuapp.com" target="_blank">Application</a>
+                    <a href="https://github.com/messenger-app-team/messenger-app" target="_blank">GitHub
+                        Repository</a>
+                </div>
+            </div> <!-- feature card-->
+
+            <div class="feature-card card-panel hoverable">
+                <div class="feature-content row">
+                    <div class="feature-info col s12 m6">
+                        <h2 class="feature-title">
+                            RecipeBook
+                        </h2>
+                        <p class="feature-text ">
+                            An online recipe book to view sand save your favorite recipes. This is a Heroku app
+                            built using Node.js, Express, Handlebars, Sequelize, Passport and Materialize.
+                        </p>
+                        <p class="feature-text">
+                            The application allows the user to create an account, add recipes, view recipes, search
+                            stored recipes and print the recipe.
+                        </p>
+                    </div> <!-- feature-info-->
+
+                    <div class="feature-img col s12 m6">
+                        <img class="card responsive-img" src="./assets/images/recipe-book.png" alt="recipe-book">
+                    </div> <!-- feature-img -->
+                </div> <!-- feature-content -->
+
+                <div class="card-action">
+                    <a href="https://arcane-peak-55315.herokuapp.com/" target="_blank">Application</a>
+                    <a href="https://github.com/kurtp23/recipe-book" target="_blank">GitHub Repository</a>
+                </div>
+            </div> <!-- feature card-->
+
+
+
+            <div class="project-cards row flex card">
+                <div class="col s12 m6">
+                    <div class="project-card hoverable card-panel">
                         <div class="card-image">
-                          <img src="./assets/images/madlibz.png" class="card">
+                            <img src="./assets/images/madlibz.png" class="card">
                         </div>
                         <div class="card-content">
                             <h3 class="sm-card-title">
                                 MadLibz
                             </h3>
-                          <p>This is a whimsical web application which allows a user create their own MadLibz story by entering a set of words or generated randomly based on part of speech!
-                          </p>
+                            <p>This is a whimsical web application which allows a user create their own MadLibz
+                                story by entering a set of words or generated randomly based on part of speech!
+                            </p>
                         </div>
                         <div class="card-action">
-                          <a href="https://teammadlibz.github.io/MadLibz/"  target="_blank">Application</a>
-                          <a href="https://github.com/TeamMadLibz/MadLibz/" target="_blank"> Repository</a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col s12 m6">
-                        <div class="project-card hoverable card-panel">
-                          <div class="card-image">
-                            <img src="./assets/images/note-taker.png" class="card">
-                          </div>
-                          <div class="card-content">
-                              <h3 class="sm-card-title">
-                                  Note Taker
-                              </h3>
-                            <p>A note simple note taking app that allows you to easily save your reminders on the go.
-                            </p>
-                          </div>
-                          <div class="card-action">
                             <a href="https://teammadlibz.github.io/MadLibz/" target="_blank">Application</a>
-                            <a href="https://github.com/leon-luna-ray/notes-app" target="_blank"> Repository</a>
-                          </div>
+                            <a href="https://github.com/TeamMadLibz/MadLibz/" target="_blank"> Repository</a>
                         </div>
-                      </div>
-                  
-            </div> <!-- project-section-->
-
-
-
-
-            <div id="contact-section" class="section">
-                <div class="section-title row">
-                    <h1 class="title-text about-title center-align">Contact</h1>
-                </div> <!-- section-title -->
-
-                <div class="contact-cards row center-align">
-                    <div class="contact-card card-panel hoverable col s6 m3">
-                        <h5>Email</h5>
-                        <i class="contact-icons fas fa-envelope medium"></i>
-                        <br>
-                        <a class="contact-link" href="mailto:leon.luna.ray@gmai..com">leon.luna.ray@gmail.com</a>
-                    </div>
-
-                    <div class="contact-card card-panel hoverable col s6 m3">
-                        <h5>GitHub</h5>
-                        <i class="contact-icons fab fa-github medium"></i>
-                        <br>
-                        <a class="contact-link" href="https://github.com/leon-luna-ray" target="_blank">leon-luna-ray</a>
-                    </div>
-
-                    <div class="contact-card card-panel hoverable col s6 m3">
-                        <h5>Linkedin</h5>
-                        <i class="contact-icons fab fa-linkedin medium"></i>
-                        <br>
-                        <a href="https://www.linkedin.com/in/ray-l-5b66181b9/" target="_blank">Profile</a>
-                    </div>
-
-                    <div class="contact-card card-panel hoverable col s6 m3">
-                        <h5>Resume</h5>
-                        <i class="contact-icons fas fa-file-download medium"></i>
-                        <br>
-                        <a class="contact-link" href="./assets/pdf/ray-luna-resume.pdf" download="luna-ray-resume">Download</a>
                     </div>
                 </div>
-            </div> <!-- contact-section-->
+
+                <div class="col s12 m6">
+                    <div class="project-card hoverable card-panel">
+                        <div class="card-image">
+                            <img src="./assets/images/note-taker.png" class="card">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="sm-card-title">
+                                Note Taker
+                            </h3>
+                            <p>A note simple note taking app that allows you to easily save your reminders on the
+                                go.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="https://teammadlibz.github.io/MadLibz/" target="_blank">Application</a>
+                            <a href="https://github.com/leon-luna-ray/notes-app" target="_blank"> Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                            <div class="feature-card card-panel hoverable">
+                <div class="feature-content row">
+                    <div class="feature-info col s12">
+                        <h2 class="feature-title">
+                            ReadMe Generator
+                        </h2>
+                        <p class="feature-text ">
+                            A command line application to seamlessly create a new ReadMe file for your projects
+                            quickly! This application will ask you all the right questions to generate a
+                            professional quality readme.
+                        </p>
+
+                        <p>
+                            This app is built using Node.js and Inquirer npm.
+                        </p>
+                    </div> <!-- feature-info-->
+
+                    <div class="feature-image-hr">
+                        <img src="./assets/images/readme-app.png" alt="Terminal displaying app"
+                            class="card responsive-img">
+                    </div>
 
 
+                </div> <!-- feature-content -->
 
-                
+                <div class="card-action">
+                    <a href="https://www.youtube.com/watch?v=XI6C2lgj540" target="_blank">Application Demo</a>
+                    <a href="https://github.com/leon-luna-ray/hw09-readme-generator" target="_blank">GitHub
+                        Repository</a>
+                </div>
+            </div> <!-- feature card-->
+
+        </section> <!-- project-section-->
+
+        <section id="contact-section" class="section">
+            <div class="section-title row">
+                <h1 class="title-text about-title center-align">Contact</h1>
+            </div> <!-- section-title -->
+
+            <div class="contact-cards row center-align">
+                <div class="contact-card card-panel hoverable col s6 m3">
+                    <h5>Email</h5>
+                    <i class="contact-icons fas fa-envelope medium"></i>
+                    <br>
+                    <a class="contact-link" href="mailto:leon.luna.ray@gmai..com">leon.luna.ray@gmail.com</a>
+                </div>
+
+                <div class="contact-card card-panel hoverable col s6 m3">
+                    <h5>GitHub</h5>
+                    <i class="contact-icons fab fa-github medium"></i>
+                    <br>
+                    <a class="contact-link" href="https://github.com/leon-luna-ray" target="_blank">leon-luna-ray</a>
+                </div>
+
+                <div class="contact-card card-panel hoverable col s6 m3">
+                    <h5>Linkedin</h5>
+                    <i class="contact-icons fab fa-linkedin medium"></i>
+                    <br>
+                    <a href="https://www.linkedin.com/in/ray-l-5b66181b9/" target="_blank">Profile</a>
+                </div>
+
+                <div class="contact-card card-panel hoverable col s6 m3">
+                    <h5>Resume</h5>
+                    <i class="contact-icons fas fa-file-download medium"></i>
+                    <br>
+                    <a class="contact-link" href="./assets/pdf/ray-luna-resume.pdf"
+                        download="luna-ray-resume">Download</a>
+                </div>
+            </div>
+        </section> <!-- contact-section-->
         </div> <!-- container -->
     </main>
 
@@ -210,4 +291,5 @@
     <script src="./assets/js/"></script>
 
 </body>
+
 </html>

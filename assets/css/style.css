@@ -7,9 +7,13 @@ body {
   font-size: 1.7vw;
 }
 
+/* ul {
+  list-style-type: none;
+} */
+
 @media only screen and (max-width: 600px) {
   body {
-     font-size: 3.5vw;
+    font-size: 3.5vw;
   }
 }
 
@@ -21,28 +25,31 @@ body {
 }
 
 .ray-luna {
-  font-size: 6
-  vw;
+  font-size: 6 vw;
 }
 
 .container {
-  margin-top: 2rem;;
+  margin-top: 2rem;
 }
 
 .feature-card {
-    padding: 3vw;
+  padding: 3vw;
 }
 
 .about-text {
-    margin-left: 3vw;
+  margin-left: 3vw;
 }
 
 .feature-img {
-    margin-top: 2vw;
+  margin-top: 2vw;
 }
 
 .contact-icons {
   margin-bottom: 1rem;
+}
+
+#hello-world {
+  font-family: 'Permanent Marker', cursive;
 }
 
 /* @media only screen and (max-width: 600px) {
