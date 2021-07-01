@@ -1,10 +1,8 @@
 # Ray Luna: Portfolio
 
   ## Description
-
+ 
   Repository for my coding portfolio. It contains my bio, a list of featured projects and contact information.
-
-  [rayluna.me](https://rayluna.me/) 
 
   ## Table of Contents
 
