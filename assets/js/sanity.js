@@ -1,4 +1,5 @@
 import { createClient } from '@sanity/client'
+import imageUrlBuilder from '@sanity/image-url';
 
 export const client = createClient({
   projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
@@ -7,6 +8,11 @@ export const client = createClient({
   apiVersion: '2023-04-08',
 })
 
+const builder = imageUrlBuilder(client);
+
+export function getImageUrl(source) {
+  return builder.image(source);
+}
 
 export async function fetchProfile() {
   const profile = await client.fetch('*[_type == "profileDetails"][0]')
