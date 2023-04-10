@@ -1,5 +1,4 @@
 import {
-  client,
   fetchProfile,
   fetchFeaturedProjects,
   getImageUrl,
