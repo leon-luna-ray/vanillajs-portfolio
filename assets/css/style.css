@@ -30,6 +30,18 @@ nav .nav-wrapper .brand-logo {
   font-weight: 300;
 }
 
+.card-action.links a {
+  color: #ffab40;
+  margin-right: 24px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.card-action.links a:hover {
+  opacity: 50%;
+}
+
 .fixed {
   position: fixed;
   top: 0;
