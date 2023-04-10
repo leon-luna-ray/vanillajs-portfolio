@@ -13,12 +13,12 @@ function getLinks(project) {
   return links.length ? links.join('\r\n') : '';
 }
 
-export function projectCard1(project) {
+export function featuredProjectCard(project) {
   return `
-    <div class="project-card feature-card card-panel hoverable">
+    <div class="project-card one feature-card card-panel hoverable">
         <div class="feature-content row">
             <div class="feature-info col s12">
-                <h2 class="feature-title">${project.title}</h2>
+                <h3 class="feature-title center-align">${project.title}</h3>
                 <p class="feature-text ">${project.description[0].children[0].text}</p>
             </div>
             <div class="feature-image-hr">
@@ -26,5 +26,21 @@ export function projectCard1(project) {
             </div>
         </div>
         <div class="card-action links">${getLinks(project)}</div>
+    </div>`;
+}
+
+export function projectCard(project) {
+  return`
+    <div class="col s12 m6">
+      <div class="project-card hoverable card-panel">
+        <div class="card-image">
+          <img src="${getImageUrl(project.mainImage)}" alt="Screenshot of ${project.title}" class="card">
+        </div>
+        <div class="card-content">
+          <h3 class="sm-card-title">${project.title}</h3>
+          <p>${project.description[0].children[0].text}</p>
+        </div>
+        <div class="card-action links">${getLinks(project)}</div>
+      </div>
     </div>`;
 }

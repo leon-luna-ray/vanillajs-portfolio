@@ -1,44 +1,34 @@
-# Ray Luna: Portfolio
-
-  ## Description
- 
-  Repository for my coding portfolio. It contains my bio, a list of featured projects and contact information.
-
-  ## Table of Contents
-
-  * [Image](#image)
-  * [Technologies](#technologies)
-  * [Known-Bugs](#known-bugs)
-  * [Next-Steps](#next-steps)
-  * [License](#license)
-  * [Contact](#contact)
-  * [Links](#links)
-
-  ## Image
-
-  ![Screenshot](./assets/images/screenshot.png)
-
-  ## Technologies
-  
-  HTML,CSS
+# Materialize Portfolio
 
 
-  ## Next-Steps
+## Description
 
-  Continue building functionality and styling.
+Repository for my coding portfolio. It contains my bio, a list of featured projects and contact information. Refactored to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript.
 
-  ## Contact
+## Image
 
-  Author: Ray Luna 
+![Screenshot](./assets/images/screenshot.png)
 
-  If you have any questions about the repo, open an issue or contact me directly at:
-  - E-Mail: leon.luna.ray@gmail.com
-  - GitHub: [leon-luna-ray](https://github.com/leon-luna-ray)
+## Technologies
 
-  ## Links
+- JavaScript
+- Vite.js
+- HTML
+- CSS
+- Materialize CSS
+- Sanity
+- Netlify
 
-  - [Portfolio](https://leon-luna-ray.github.io/portfolio/) 
+## Contact
 
-  - [Project Repository](https://github.com/leon-luna-ray/portfolio)
+Author: Ray Luna
 
-  
+If you have any questions about the repo, open an issue or contact me directly at:
+- E-Mail: leon.luna.ray@gmail.com
+- GitHub: [leon-luna-ray](https://github.com/leon-luna-ray)
+
+## Links
+
+- [Portfolio](https://rldev-html-portfolio.netlify.app)
+
+- [Project Repository](https://github.com/leon-luna-ray/html-css-portfolio)
