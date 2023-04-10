@@ -1,9 +1,9 @@
-# Ray Luna: Portfolio
+# Materialize Portfolio
+
 
 ## Description
 
-Repository for my coding portfolio. It contains my bio, a list of featured projects and contact information.
-Original project was deployed as a static stie. Refactored to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript.
+Repository for my coding portfolio. It contains my bio, a list of featured projects and contact information. Refactored to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript.
 
 ## Image
 
@@ -15,7 +15,7 @@ Original project was deployed as a static stie. Refactored to pull content from 
 - Vite.js
 - HTML
 - CSS
-- Materialize
+- Materialize CSS
 - Sanity
 - Netlify
 
@@ -32,5 +32,3 @@ If you have any questions about the repo, open an issue or contact me directly a
 - [Portfolio](https://rldev-html-portfolio.netlify.app)
 
 - [Project Repository](https://github.com/leon-luna-ray/html-css-portfolio)
-
-

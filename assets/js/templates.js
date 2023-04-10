@@ -13,12 +13,12 @@ function getLinks(project) {
   return links.length ? links.join('\r\n') : '';
 }
 
-export function projectCard1(project) {
+export function featuredProjectCard(project) {
   return `
-    <div class="project-card feature-card card-panel hoverable">
+    <div class="project-card one feature-card card-panel hoverable">
         <div class="feature-content row">
             <div class="feature-info col s12">
-                <h2 class="feature-title">${project.title}</h2>
+                <h3 class="feature-title center-align">${project.title}</h3>
                 <p class="feature-text ">${project.description[0].children[0].text}</p>
             </div>
             <div class="feature-image-hr">

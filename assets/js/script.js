@@ -5,7 +5,7 @@ import {
   getImageUrl,
 } from './sanity';
 
-import { projectCard1 } from './templates';
+import { featuredProjectCard } from './templates';
 
 const profile = await fetchProfile();
 const projects = await fetchFeaturedProjects();
@@ -54,7 +54,7 @@ if (profile) {
 if (projects.length) {
   projects.forEach((project, index) => {
     if (index === 0) {
-      const card = projectCard1(project);
+      const card = featuredProjectCard(project);
       projectSection.insertAdjacentHTML('beforeend', card);
     }
   });
