@@ -5,6 +5,8 @@
 
 Repository for my coding portfolio. It contains my bio, a list of featured projects and contact information. Refactored to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript.
 
+[https://materialize-portfolio-rldev.netlify.app](https://materialize-portfolio-rldev.netlify.app)
+
 ## Technologies
 
 - JavaScript
@@ -14,12 +16,6 @@ Repository for my coding portfolio. It contains my bio, a list of featured proje
 - Materialize CSS
 - Sanity
 - Netlify
-
-## Links
-
-- [Portfolio](https://rldev-html-portfolio.netlify.app)
-
-- [Project Repository](https://github.com/leon-luna-ray/html-css-portfolio)
 
 ## Image
 
