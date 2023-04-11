@@ -1,11 +1,11 @@
 # Materialize Portfolio
 
+This is one of my first developer portfolios. It contains my bio, a list of skills, featured projects and contact information. Originally developed as a static HTML website. I refactored it to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript. This updates the content automatically and keeps it up to date.
 
-## Description
+Project URL: [https://materialize-portfolio-rldev.netlify.app/](https://materialize-portfolio-rldev.netlify.app/)
 
-Repository for my coding portfolio. It contains my bio, a list of featured projects and contact information. Refactored to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript.
-
-[https://materialize-portfolio-rldev.netlify.app](https://materialize-portfolio-rldev.netlify.app)
+## Related Project
+dev-cms: [https://github.com/leon-luna-ray/dev-cms/](https://github.com/leon-luna-ray/dev-cms/)
 
 ## Technologies
 
