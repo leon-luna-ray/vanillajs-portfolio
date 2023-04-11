@@ -14,11 +14,11 @@ function getLinks(project) {
 }
 
 function renderSkillsList(items) {
-  const skills = [];
-
-  items.forEach((item) => {
-    console.log(item)
-    skills.push(`<span>Skill</span>`)
+  const skills = items.map((item) => {
+    if(item.website) {
+      return `<li><a href="${item.website}" target="_blank">${item.title}</a></li>`
+    }
+    return `<li><span>${item.title}</span></li>`
   })
 
   return skills.length ? skills.join('\r\n') : '';
@@ -56,7 +56,7 @@ export function projectCard(project) {
     </div>`;
 }
 
-export function skillsList(list) {
+export function skillsCard(list) {
   return `
     <div class="skills-list">
       <h4>${list.title}</h4>

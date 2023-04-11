@@ -5,14 +5,14 @@ import {
   getImageUrl,
 } from './sanity';
 
-import { featuredProjectCard, projectCard, skillsList } from './templates';
+import { featuredProjectCard, projectCard, skillsCard } from './templates';
 
 const profile = await fetchProfile();
 const projects = await fetchFeaturedProjects();
 const skillLists = await fetchSkills();
 
-const featuredProject = document.getElementById('featured-project');
 const grid = document.getElementById('card-grid');
+const featuredProject = document.getElementById('featured-project');
 const skillsListsSection = document.getElementById('skills-lists');
 
 const year = new Date().getFullYear();
@@ -28,15 +28,18 @@ if (profile) {
   }
   if (profile.email) {
     const mailto = `mailto:${profile.email}`;
+
     document.querySelector('#email-link').href = mailto;
     document.querySelector('#email-link .contact-link').textContent =
       profile.email;
+
     document.querySelector('#email-link').classList.remove('hide');
   }
   if (profile.github) {
     document.querySelector('#github-link').href = profile.github;
     document.querySelector('#github-link .contact-link').textContent =
       profile.github_user || 'Github';
+
     document.querySelector('#github-link').classList.remove('hide');
   }
   if (profile.linkedin) {
@@ -53,6 +56,7 @@ if (profile) {
   }
   if (profile.image) {
     const profileImageSrc = getImageUrl(profile?.image).size(300, 300).url();
+
     document.querySelector('#about-section #ray-img img').src = profileImageSrc;
   }
 }
@@ -61,18 +65,21 @@ if (projects.length) {
   projects.forEach((project, index) => {
     if (index === 0) {
       const markup = featuredProjectCard(project);
+
       featuredProject.insertAdjacentHTML('beforeend', markup);
     } else {
       const markup = projectCard(project);
+
       grid.insertAdjacentHTML('beforeend', markup);
     }
   });
 }
 
-if(skillLists.length) {
+if (skillLists.length) {
   skillLists.forEach((list) => {
-    const markup = skillsList(list);
+    console.log(list)
+    const markup = skillsCard(list);
 
-    skillsListsSection.insertAdjacentHTML('beforeend', markup)
-  })
+    skillsListsSection.insertAdjacentHTML('beforeend', markup);
+  });
 }
