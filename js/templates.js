@@ -13,6 +13,17 @@ function getLinks(project) {
   return links.length ? links.join('\r\n') : '';
 }
 
+function renderSkillsList(items) {
+  const skills = [];
+
+  items.forEach((item) => {
+    console.log(item)
+    skills.push(`<span>Skill</span>`)
+  })
+
+  return skills.length ? skills.join('\r\n') : '';
+}
+
 export function featuredProjectCard(project) {
   return `
     <div class="project-card one feature-card card-panel hoverable">
@@ -43,4 +54,12 @@ export function projectCard(project) {
         <div class="card-action links">${getLinks(project)}</div>
       </div>
     </div>`;
+}
+
+export function skillsList(list) {
+  return `
+    <div class="skills-list">
+      <h4>${list.title}</h4>
+      <ul class="col s4">${renderSkillsList(list.skills)}</ul>
+    </div>`
 }

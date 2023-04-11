@@ -5,7 +5,7 @@ import {
   getImageUrl,
 } from './sanity';
 
-import { featuredProjectCard, projectCard } from './templates';
+import { featuredProjectCard, projectCard, skillsList } from './templates';
 
 const profile = await fetchProfile();
 const projects = await fetchFeaturedProjects();
@@ -13,6 +13,7 @@ const skillLists = await fetchSkills();
 
 const featuredProject = document.getElementById('featured-project');
 const grid = document.getElementById('card-grid');
+const skillsListsSection = document.getElementById('skills-lists');
 
 const year = new Date().getFullYear();
 const copyrightText = document.createTextNode(year);
@@ -59,15 +60,19 @@ if (profile) {
 if (projects.length) {
   projects.forEach((project, index) => {
     if (index === 0) {
-      const card = featuredProjectCard(project);
-      featuredProject.insertAdjacentHTML('beforeend', card);
+      const markup = featuredProjectCard(project);
+      featuredProject.insertAdjacentHTML('beforeend', markup);
     } else {
-      const card = projectCard(project);
-      grid.insertAdjacentHTML('beforeend', card);
+      const markup = projectCard(project);
+      grid.insertAdjacentHTML('beforeend', markup);
     }
   });
 }
 
 if(skillLists.length) {
-  console.log(skillLists);
+  skillLists.forEach((list) => {
+    const markup = skillsList(list);
+
+    skillsListsSection.insertAdjacentHTML('beforeend', markup)
+  })
 }
