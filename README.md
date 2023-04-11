@@ -15,6 +15,7 @@ Repository for my coding portfolio. It contains my bio, a list of featured proje
 - CSS
 - Materialize CSS
 - Sanity
+- Groq
 - Netlify
 
 ## Image

@@ -1,6 +1,7 @@
 import {
-  fetchProfile,
   fetchFeaturedProjects,
+  fetchProfile,
+  fetchSkills,
   getImageUrl,
 } from './sanity';
 
@@ -8,7 +9,7 @@ import { featuredProjectCard, projectCard } from './templates';
 
 const profile = await fetchProfile();
 const projects = await fetchFeaturedProjects();
-// const skillLists = await fetchSkills();
+const skillLists = await fetchSkills();
 
 const featuredProject = document.getElementById('featured-project');
 const grid = document.getElementById('card-grid');
@@ -65,4 +66,8 @@ if (projects.length) {
       grid.insertAdjacentHTML('beforeend', card);
     }
   });
+}
+
+if(skillLists.length) {
+  console.log(skillLists);
 }
