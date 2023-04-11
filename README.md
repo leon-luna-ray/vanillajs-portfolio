@@ -1,6 +1,6 @@
 # Materialize Portfolio
 
-This is one of my first developer portfolios. It contains my bio, a list of skills, featured projects and contact information. Originally developed as a static HTML website. I refactored it to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript. This updates the content automatically and keeps it up to date.
+This is an early portfolio project built with HTML and Materialize CSS. It contains my bio, a list of skills, featured projects, and contact information. Originally developed as a static HTML website. I refactored it to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript. This updates the content automatically and keeps it up to date.
 
 Project URL: [https://materialize-portfolio-rldev.netlify.app/](https://materialize-portfolio-rldev.netlify.app/)
 
