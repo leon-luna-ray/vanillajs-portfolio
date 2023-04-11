@@ -1,17 +1,19 @@
 import {
-  fetchProfile,
   fetchFeaturedProjects,
+  fetchProfile,
+  fetchSkills,
   getImageUrl,
 } from './sanity';
 
-import { featuredProjectCard, projectCard } from './templates';
+import { featuredProjectCard, projectCard, skillsCard } from './templates';
 
 const profile = await fetchProfile();
 const projects = await fetchFeaturedProjects();
-// const skillLists = await fetchSkills();
+const skillLists = await fetchSkills();
 
-const featuredProject = document.getElementById('featured-project');
 const grid = document.getElementById('card-grid');
+const featuredProject = document.getElementById('featured-project');
+const skillsListsSection = document.getElementById('skills-lists');
 
 const year = new Date().getFullYear();
 const copyrightText = document.createTextNode(year);
@@ -26,15 +28,18 @@ if (profile) {
   }
   if (profile.email) {
     const mailto = `mailto:${profile.email}`;
+
     document.querySelector('#email-link').href = mailto;
     document.querySelector('#email-link .contact-link').textContent =
       profile.email;
+
     document.querySelector('#email-link').classList.remove('hide');
   }
   if (profile.github) {
     document.querySelector('#github-link').href = profile.github;
     document.querySelector('#github-link .contact-link').textContent =
       profile.github_user || 'Github';
+
     document.querySelector('#github-link').classList.remove('hide');
   }
   if (profile.linkedin) {
@@ -42,6 +47,12 @@ if (profile) {
     document.querySelector('#linkedin-link .contact-link').textContent =
       profile.linkedin_user || 'Profile';
     document.querySelector('#linkedin-link').classList.remove('hide');
+  }
+  if (profile.title) {
+    console.log(profile.title);
+    const title = document.createTextNode(profile.title);
+
+    document.querySelector('#logo .job-title').append(title);
   }
   if (profile.website) {
     document.querySelector('#website-link').href = profile.website;
@@ -51,6 +62,7 @@ if (profile) {
   }
   if (profile.image) {
     const profileImageSrc = getImageUrl(profile?.image).size(300, 300).url();
+
     document.querySelector('#about-section #ray-img img').src = profileImageSrc;
   }
 }
@@ -58,11 +70,21 @@ if (profile) {
 if (projects.length) {
   projects.forEach((project, index) => {
     if (index === 0) {
-      const card = featuredProjectCard(project);
-      featuredProject.insertAdjacentHTML('beforeend', card);
+      const markup = featuredProjectCard(project);
+
+      featuredProject.insertAdjacentHTML('beforeend', markup);
     } else {
-      const card = projectCard(project);
-      grid.insertAdjacentHTML('beforeend', card);
+      const markup = projectCard(project);
+
+      grid.insertAdjacentHTML('beforeend', markup);
     }
+  });
+}
+
+if (skillLists.length) {
+  skillLists.forEach((list) => {
+    const markup = skillsCard(list);
+
+    skillsListsSection.insertAdjacentHTML('beforeend', markup);
   });
 }

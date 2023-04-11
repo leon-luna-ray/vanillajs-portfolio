@@ -30,6 +30,12 @@ nav .nav-wrapper .brand-logo {
   font-weight: 300;
 }
 
+#logo .job-title {
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding-left: 1rem;
+}
+
 .card-action.links a {
   color: #ffab40;
   margin-right: 24px;
@@ -72,6 +78,14 @@ nav .nav-wrapper .brand-logo {
   padding-left: 2.5rem;
 }
 
+#skills-section #skills-lists ul li a {
+  color: black;
+}
+#skills-section #skills-lists ul li a:hover {
+  color: #ffab40;
+  text-decoration: underline;
+}
+
 .feature-img {
   margin-top: 2vw;
 }
@@ -88,6 +102,13 @@ nav .nav-wrapper .brand-logo {
   aspect-ratio: 4/3;
   object-fit: cover;
   object-position: top;
+}
+
+#contact-section .contact-cards a {
+  color: black;
+}
+#contact-section .contact-cards a:hover {
+  color: #ffab40;
 }
 
 footer .copyright {

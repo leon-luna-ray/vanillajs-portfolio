@@ -13,6 +13,17 @@ function getLinks(project) {
   return links.length ? links.join('\r\n') : '';
 }
 
+function renderSkillsList(items) {
+  const skills = items.map((item) => {
+    if(item.website) {
+      return `<li><a href="${item.website}" target="_blank">${item.title}</a></li>`
+    }
+    return `<li><span>${item.title}</span></li>`
+  })
+
+  return skills.length ? skills.join('\r\n') : '';
+}
+
 export function featuredProjectCard(project) {
   return `
     <div class="project-card one feature-card card-panel hoverable">
@@ -43,4 +54,12 @@ export function projectCard(project) {
         <div class="card-action links">${getLinks(project)}</div>
       </div>
     </div>`;
+}
+
+export function skillsCard(list) {
+  return `
+    <div class="skills-list col s4">
+      <h4>${list.title}</h4>
+      <ul>${renderSkillsList(list.skills)}</ul>
+    </div>`
 }
