@@ -58,8 +58,8 @@ export function projectCard(project) {
 
 export function skillsCard(list) {
   return `
-    <div class="skills-list">
+    <div class="skills-list col s4">
       <h4>${list.title}</h4>
-      <ul class="col s4">${renderSkillsList(list.skills)}</ul>
+      <ul>${renderSkillsList(list.skills)}</ul>
     </div>`
 }

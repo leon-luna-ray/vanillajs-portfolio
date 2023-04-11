@@ -15,6 +15,7 @@ export function getImageUrl(source) {
 }
 
 export async function fetchProfile() {
+  // Sanity queires are in the GROQ query language
   const query = `*[_type == "profileDetails"][0]`;
   const profile = await client.fetch(query);
 

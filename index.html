@@ -10,17 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+    <!-- Google Fonts Material icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- Fontawesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
       integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
       crossorigin="anonymous"
-    />
-    <!-- Google Fonts Material icons-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
     />
     <!-- Materialize CSS -->
     <link
@@ -29,14 +29,17 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Ray Luna | Portfolio</title>
+    <title>Ray Luna | Developer Portfolio</title>
   </head>
 
   <body>
     <div class="fixed">
       <nav class="nav red accent-3">
         <div class="nav-wrapper container">
-          <a href="#" class="brand-logo left nav-name">Ray Luna</a>
+          <div id="logo" class="brand-logo left nav-name">
+            <span class="name">Ray Luna</span>
+            <span class="job-title"></span>
+          </div>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <!-- nav-links -->
             <li class="nav-link"><a href="#about-section">About</a></li>
@@ -48,107 +51,94 @@
       </nav>
     </div>
     <main class="container">
-      <div>
-        <section id="about-section" class="section">
-          <div class="section-title row"></div>
-          <!-- section-title -->
-          <div class="feature-card card-panel hoverable">
-            <div class="feature-content row">
-              <div id="ray-img" class="feature-img col s12 m4">
-                <img src="#" alt="Ray Luna profile picture" />
-              </div>
-              <div id="about-info" class="feature-info col s12 m8">
-                <h1 class="title-text about-title">About Me</h1>
-                <p class="about-text" class="feature-text">
-                  <!-- Text injected here -->
-                </p>
-              </div>
+      <section id="about-section" class="section">
+        <div class="section-title row"></div>
+        <div class="feature-card card-panel hoverable">
+          <div class="feature-content row">
+            <div id="ray-img" class="feature-img col s12 m4">
+              <img src="#" alt="Ray Luna profile picture" />
             </div>
-            <!-- feature-content -->
-          </div>
-          <!-- feature card-->
-        </section>
-        <!-- about-section-->
-
-        <section id="project-section" class="section">
-          <div class="section-title row">
-            <h2 class="title-text about-title">Projects</h2>
-          </div>
-          <!-- Inject project cards here -->
-          <div id="featured-project"></div>
-          <div id="card-grid" class="project-cards row flex card"></div>
-        </section>
-        <!-- project-section-->
-
-        <section id="skills-section" class="section">
-          <div class="section-title row">
-            <h2 class="title-text about-title">Skills</h2>
-          </div>
-          <!-- section-title -->
-
-          <div class="skills feature-card card-panel hoverable">
-            <div id="skills-lists" class="feature-content row">
-                <!-- Inject skills lists here-->
+            <div id="about-info" class="feature-info col s12 m8">
+              <h1 class="title-text about-title">About Me</h1>
+              <p class="about-text" class="feature-text">
+                <!-- Text injected here -->
+              </p>
             </div>
-            <!-- feature-content -->
           </div>
-          <!-- feature card-->
-        </section>
-        <!-- skills-section-->
-
-        <section id="contact-section" class="section">
-          <div class="section-title row">
-            <h2 class="title-text about-title">Contact</h2>
+        </div>
+      </section>
+      <!-- about-section-->
+      <section id="skills-section" class="section">
+        <div class="section-title">
+          <h2 class="title-text about-title">Skills</h2>
+        </div>
+        <div class="skills feature-card card-panel hoverable">
+          <div id="skills-lists" class="feature-content row">
+            <!-- Inject skills lists here-->
           </div>
-          <!-- section-title -->
-          <div class="contact-cards row center-align">
-            <a
-              id="email-link"
-              class="hide contact-card card-panel hoverable col s6 m3"
-            >
-              <h5>Email</h5>
-              <i class="contact-icons fas fa-envelope medium"></i>
-              <br />
-              <span class="contact-link"></span>
-            </a>
-            <a
-              id="github-link"
-              target="_blank"
-              class="hide contact-card card-panel hoverable col s6 m3"
-            >
-              <h5>GitHub</h5>
-              <i class="contact-icons fab fa-github medium"></i>
-              <br />
-              <span class="contact-link"></span>
-            </a>
-            <a
-              id="linkedin-link"
-              target="_blank"
-              class="hide contact-card card-panel hoverable col s6 m3"
-            >
-              <h5>Linkedin</h5>
-              <i class="contact-icons fab fa-linkedin medium"></i>
-              <br />
-              <span class="contact-link"></span>
-            </a>
-            <a
-              id="website-link"
-              target="_blank"
-              class="hide contact-card card-panel hoverable col s6 m3"
-            >
-              <h5>Website</h5>
-              <i class="contact-icons fa fa-globe medium"></i>
-              <br />
-              <span class="contact-link"></span>
-            </a>
-          </div>
-        </section>
-        <!-- contact-section-->
-      </div>
-      <!-- container -->
+        </div>
+      </section>
+      <!-- skills-section-->
+      <section id="project-section" class="section">
+        <div class="section-title row">
+          <h2 class="title-text about-title">Projects</h2>
+        </div>
+        <!-- Inject project cards here -->
+        <div id="featured-project"></div>
+        <div id="card-grid" class="project-cards row flex card"></div>
+      </section>
+      <!-- project-section-->
+      <section id="contact-section" class="section">
+        <div class="section-title row">
+          <h2 class="title-text about-title">Contact</h2>
+        </div>
+        <!-- section-title -->
+        <div class="contact-cards row center-align">
+          <a
+            id="email-link"
+            class="hide contact-card card-panel hoverable col s6 m3"
+          >
+            <h5>Email</h5>
+            <i class="contact-icons fas fa-envelope medium"></i>
+            <br />
+            <span class="contact-link"></span>
+          </a>
+          <a
+            id="github-link"
+            target="_blank"
+            class="hide contact-card card-panel hoverable col s6 m3"
+          >
+            <h5>GitHub</h5>
+            <i class="contact-icons fab fa-github medium"></i>
+            <br />
+            <span class="contact-link"></span>
+          </a>
+          <a
+            id="linkedin-link"
+            target="_blank"
+            class="hide contact-card card-panel hoverable col s6 m3"
+          >
+            <h5>Linkedin</h5>
+            <i class="contact-icons fab fa-linkedin medium"></i>
+            <br />
+            <span class="contact-link"></span>
+          </a>
+          <a
+            id="website-link"
+            target="_blank"
+            class="hide contact-card card-panel hoverable col s6 m3"
+          >
+            <h5>Website</h5>
+            <i class="contact-icons fa fa-globe medium"></i>
+            <br />
+            <span class="contact-link"></span>
+          </a>
+        </div>
+      </section>
+      <!-- contact-section-->
     </main>
     <footer>
-      <div class="copyright center-align">© Ray Luna </div>
+      <div class="copyright center-align">© Ray Luna</div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

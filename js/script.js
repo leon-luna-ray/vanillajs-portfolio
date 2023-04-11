@@ -48,6 +48,12 @@ if (profile) {
       profile.linkedin_user || 'Profile';
     document.querySelector('#linkedin-link').classList.remove('hide');
   }
+  if (profile.title) {
+    console.log(profile.title);
+    const title = document.createTextNode(profile.title);
+
+    document.querySelector('#logo .job-title').append(title);
+  }
   if (profile.website) {
     document.querySelector('#website-link').href = profile.website;
     document.querySelector('#website-link .contact-link').textContent =
