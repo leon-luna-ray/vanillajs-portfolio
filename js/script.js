@@ -77,7 +77,6 @@ if (projects.length) {
 
 if (skillLists.length) {
   skillLists.forEach((list) => {
-    console.log(list)
     const markup = skillsCard(list);
 
     skillsListsSection.insertAdjacentHTML('beforeend', markup);
