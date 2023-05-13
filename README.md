@@ -9,11 +9,11 @@ dev-cms: [https://github.com/leon-luna-ray/dev-cms/](https://github.com/leon-lun
 
 ## Technologies
 
-- JavaScript
-- Vite.js
 - HTML
 - CSS
 - Materialize CSS
+- JavaScript
+- Vite.js
 - Sanity
 - GROQ
 - Netlify

@@ -6,6 +6,11 @@ import {
 } from './sanity';
 
 import { featuredProjectCard, projectCard, skillsCard } from './templates';
+import { Elm } from './Main.elm'
+
+const app = Elm.Main.init({
+  node: document.getElementById('elm-node')
+})
 
 const profile = await fetchProfile();
 const projects = await fetchFeaturedProjects();
