@@ -4,30 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer type="module" src="./js/main.js"></script>
     <title>Ray Luna | Developer Portfolio</title>
   </head>
 
   <body>
-    <div class="fixed">
-      <nav class="nav red accent-3">
-        <div class="nav-wrapper container">
-          <div id="logo" class="brand-logo left nav-name">
-            <span class="name">Ray Luna</span>
-            <span class="job-title"></span>
-          </div>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <!-- nav-links -->
-            <li class="nav-link"><a href="#about-section">About</a></li>
-            <li class="nav-link"><a href="#project-section">Projects</a></li>
-            <li class="nav-link"><a href="#contact-section">Contact</a></li>
-          </ul>
-        </div>
-        <!-- nav-wrapper -->
+    <header>
+      <div id="logo">
+        <span class="name">Ray Luna</span>
+        <span class="job-title"></span>
+      </div>
+      <nav>
+        <ul id="nav-mobile">
+          <li class="nav-link"><a href="#about-section">About</a></li>
+          <li class="nav-link"><a href="#project-section">Projects</a></li>
+          <li class="nav-link"><a href="#contact-section">Contact</a></li>
+        </ul>
       </nav>
-    </div>
+    </header>
     <main class="container">
       <!-- About -->
       <section id="about-section">
@@ -42,81 +37,47 @@
         </div>
       </section>
 
-      <section id="skills-section" class="section">
-        <div class="section-title">
-          <h2 class="title-text about-title">Skills</h2>
-        </div>
-        <div class="skills feature-card card-panel hoverable">
-          <div id="skills-lists" class="feature-content row">
-            <!-- Inject skills lists here-->
-          </div>
+      <!-- Skills -->
+      <section id="skills-section">
+        <h2 class="title-text about-title">Skills</h2>
+        <div id="skills-lists">
+          <!-- Inject skills lists here-->
         </div>
       </section>
-      <!-- skills-section-->
-      <section id="project-section" class="section">
-        <div class="section-title row">
-          <h2 class="title-text about-title">Projects</h2>
-        </div>
+
+      <!-- Projects -->
+      <section id="project-section">
+        <h2>Projects</h2>
         <!-- Inject project cards here -->
         <div id="featured-project"></div>
-        <div id="card-grid" class="project-cards row flex card"></div>
+        <div id="card-grid"></div>
       </section>
-      <!-- project-section-->
-      <section id="contact-section" class="section">
-        <div class="section-title row">
-          <h2 class="title-text about-title">Contact</h2>
-        </div>
-        <!-- section-title -->
-        <div class="contact-cards row center-align">
-          <a
-            id="email-link"
-            class="hide contact-card card-panel hoverable col s6 m3"
-          >
+
+      <!-- Contact -->
+      <section id="contact-section">
+        <h2>Contact</h2>
+        <div>
+          <a id="email-link">
             <h5>Email</h5>
-            <i class="contact-icons fas fa-envelope medium"></i>
-            <br />
             <span class="contact-link"></span>
           </a>
-          <a
-            id="github-link"
-            target="_blank"
-            class="hide contact-card card-panel hoverable col s6 m3"
-          >
+          <a id="github-link" target="_blank">
             <h5>GitHub</h5>
-            <i class="contact-icons fab fa-github medium"></i>
-            <br />
             <span class="contact-link"></span>
           </a>
-          <a
-            id="linkedin-link"
-            target="_blank"
-            class="hide contact-card card-panel hoverable col s6 m3"
-          >
+          <a id="linkedin-link" target="_blank">
             <h5>Linkedin</h5>
-            <i class="contact-icons fab fa-linkedin medium"></i>
-            <br />
             <span class="contact-link"></span>
           </a>
-          <a
-            id="website-link"
-            target="_blank"
-            class="hide contact-card card-panel hoverable col s6 m3"
-          >
+          <a id="website-link" target="_blank">
             <h5>Website</h5>
-            <i class="contact-icons fa fa-globe medium"></i>
-            <br />
             <span class="contact-link"></span>
           </a>
         </div>
       </section>
-      <!-- contact-section-->
     </main>
     <footer>
-      <div class="copyright center-align">© Ray Luna</div>
+      <div class="copyright">© Ray Luna</div>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- JS -->
-    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
