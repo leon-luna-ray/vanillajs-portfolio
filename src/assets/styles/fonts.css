@@ -1,0 +1,30 @@
+/* Bebas */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Gloria */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+/* Reenie */
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+/* Urbanist */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-gloria {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.font-reenie {
+    font-family: 'Reenie Beanie', cursive;
+}
+h2.font-reenie  {
+   font-size: 4.5rem;
+}
+
+.font-urbanist {
+    font-family: 'Urbanist', sans-serif;
+}

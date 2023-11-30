@@ -1,148 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts Material icons-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <!-- Fontawesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
-      crossorigin="anonymous"
-    />
-    <!-- Materialize CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Ray Luna | Developer Portfolio</title>
-  </head>
 
-  <body>
-    <div class="fixed">
-      <nav class="nav red accent-3">
-        <div class="nav-wrapper container">
-          <div id="logo" class="brand-logo left nav-name">
-            <span class="name">Ray Luna</span>
-            <span class="job-title"></span>
-          </div>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <!-- nav-links -->
-            <li class="nav-link"><a href="#about-section">About</a></li>
-            <li class="nav-link"><a href="#project-section">Projects</a></li>
-            <li class="nav-link"><a href="#contact-section">Contact</a></li>
-          </ul>
-        </div>
-        <!-- nav-wrapper -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer type="module" src="/src/main.js"></script>
+  <title>Ray Luna | Developer Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <div class="container inner">
+      <div id="logo" class="flex-col-03">
+        <span class="name font-urbanist">Ray Luna</span>
+        <span class="job-title"></span>
+      </div>
+      <nav>
+        <button id="dark-mode-btn" class="zoom-in-out">I/0</button>
       </nav>
     </div>
-    <main class="container">
-      <section id="about-section" class="section">
-        <div class="section-title row"></div>
-        <div class="feature-card card-panel hoverable">
-          <div class="feature-content row">
-            <div id="ray-img" class="feature-img col s12 m4">
-              <img src="#" alt="Ray Luna profile picture" />
-            </div>
-            <div id="about-info" class="feature-info col s12 m8">
-              <h1 class="title-text about-title">About Me</h1>
-              <p class="about-text" class="feature-text">
-                <!-- Text injected here -->
-              </p>
-            </div>
-          </div>
+  </header>
+  <main class="flex-col-4">
+    <div class="hero">
+      <div class="container inner">
+        <h1 id="hero-text" class="font-reenie"></h1>
+      </div>
+    </div>
+    <!-- About -->
+    <section id="about-section">
+      <div class="container inner">
+        <div id="ray-img">
+          <img src="#" alt="Ray Luna profile picture" />
         </div>
-      </section>
-      <!-- about-section-->
-      <section id="skills-section" class="section">
-        <div class="section-title">
-          <h2 class="title-text about-title">Skills</h2>
+        <div id="about-info" class="flex-col-1">
+          <h2 class="font-reenie">About Me</h2>
+          <p class="about-text">
+            <!-- Text injected here -->
+          </p>
         </div>
-        <div class="skills feature-card card-panel hoverable">
-          <div id="skills-lists" class="feature-content row">
-            <!-- Inject skills lists here-->
-          </div>
-        </div>
-      </section>
-      <!-- skills-section-->
-      <section id="project-section" class="section">
-        <div class="section-title row">
-          <h2 class="title-text about-title">Projects</h2>
-        </div>
-        <!-- Inject project cards here -->
-        <div id="featured-project"></div>
-        <div id="card-grid" class="project-cards row flex card"></div>
-      </section>
-      <!-- project-section-->
-      <section id="contact-section" class="section">
-        <div class="section-title row">
-          <h2 class="title-text about-title">Contact</h2>
-        </div>
-        <!-- section-title -->
-        <div class="contact-cards row center-align">
-          <a
-            id="email-link"
-            class="hide contact-card card-panel hoverable col s6 m3"
-          >
-            <h5>Email</h5>
-            <i class="contact-icons fas fa-envelope medium"></i>
-            <br />
-            <span class="contact-link"></span>
-          </a>
-          <a
-            id="github-link"
-            target="_blank"
-            class="hide contact-card card-panel hoverable col s6 m3"
-          >
-            <h5>GitHub</h5>
-            <i class="contact-icons fab fa-github medium"></i>
-            <br />
-            <span class="contact-link"></span>
-          </a>
-          <a
-            id="linkedin-link"
-            target="_blank"
-            class="hide contact-card card-panel hoverable col s6 m3"
-          >
-            <h5>Linkedin</h5>
-            <i class="contact-icons fab fa-linkedin medium"></i>
-            <br />
-            <span class="contact-link"></span>
-          </a>
-          <a
-            id="website-link"
-            target="_blank"
-            class="hide contact-card card-panel hoverable col s6 m3"
-          >
-            <h5>Website</h5>
-            <i class="contact-icons fa fa-globe medium"></i>
-            <br />
-            <span class="contact-link"></span>
-          </a>
-        </div>
-      </section>
-      <!-- contact-section-->
-    </main>
-    <footer>
-      <div class="copyright center-align">© Ray Luna </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- JS -->
-    <script type="module" src="./js/script.js"></script>
-  </body>
+    <!-- Skills -->
+    <section id="skills-section">
+      <div class="container inner flex-col-1">
+        <h2 class="font-reenie">Skills</h2>
+        <div id="skills-lists" class="grid-cols-3">
+          <!-- Inject skills lists here-->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="project-section">
+      <div class="container flex-col-2">
+        <h2 class="font-reenie">Projects</h2>
+        <div id="card-grid" class="grid-cols-2">
+          <!-- Inject project cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact-section">
+      <div class="container flex-col-4">
+
+        <h2 class="font-reenie">Contact</h2>
+        <div class="links grid-cols-2">
+          <a id="email-link">
+            <h5>Email</h5>
+            <span class="contact-link"></span>
+          </a>
+          <a id="github-link" target="_blank">
+            <h5>GitHub</h5>
+            <span class="contact-link"></span>
+          </a>
+          <a id="linkedin-link" target="_blank">
+            <h5>Linkedin</h5>
+            <span class="contact-link"></span>
+          </a>
+          <a id="website-link" target="_blank">
+            <h5>Website</h5>
+            <span class="contact-link"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container inner py-2">
+      <div>© Ray Luna <span class="copyright"></span></div>
+    </div>
+  </footer>
+</body>
+
 </html>

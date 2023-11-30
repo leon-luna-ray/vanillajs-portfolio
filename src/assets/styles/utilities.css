@@ -1,0 +1,91 @@
+.border-red {
+  border: 3px solid red;
+}
+
+.border-green {
+  border: 3px solid green;
+}
+
+.border-blue {
+  border: 3px solid blue;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.flex-col-03 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+
+.flex-col-05 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.flex-col-1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.flex-col-2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.flex-col-4 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem
+}
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Animation */
+.zoom-in-out {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-in-out:hover {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .grid-cols-2,
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

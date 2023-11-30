@@ -1,0 +1,95 @@
+:root {
+  --pink-pp: #e00097;
+  --pink-pp-light: #de3ca8;
+}
+
+body {
+  background-color: white;
+  color: var(--pink-pp);
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.dark body {
+  background-color: var(--pink-pp);
+  color: white;
+}
+
+button {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10%;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--pink-pp);
+  color: white;
+  font-weight: 400;
+}
+
+.dark button {
+  background-color: white;
+  color: var(--pink-pp);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: 'Bebas Neue', sans-serif;
+  line-height: 3.2rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h1,
+.h1 {
+  font-size: 3.5rem;
+}
+
+h2,
+.h2 {
+  font-size: 3rem;
+}
+
+h3,
+.h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 2rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: black;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}

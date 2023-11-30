@@ -1,7 +1,10 @@
-# Materialize Portfolio
+# Vanilla.js Portfolio
 
-This is an early portfolio project built with HTML and Materialize CSS. It contains my bio, a list of skills, featured projects, and contact information. Originally developed as a static HTML website. I refactored it to pull content from Sanity.io CMS and render HTML dynamically with vanilla JavaScript. This updates the content automatically and keeps it up to date.
+This is my web developer portfolio buiilt with Vanilla JavaScript, HTML and CSS. It contains my bio, a list of skills, featured projects, and contact information.
 
+Site content is pulled from Sanity.io CMS and rendered dynamically with JavaScript. This updates the content automatically and keeps it up to date across all of my portfolio sites.
+
+This was an early portfolio project orginally a static website built with HTML and MaterializeCSS.
 Project URL: [https://materialize-portfolio-rldev.netlify.app/](https://materialize-portfolio-rldev.netlify.app/)
 
 ## Related Project
@@ -9,18 +12,16 @@ dev-cms: [https://github.com/leon-luna-ray/dev-cms/](https://github.com/leon-lun
 
 ## Technologies
 
+- CSS3
+- HTML5
 - JavaScript
-- Vite.js
-- HTML
-- CSS
-- Materialize CSS
-- Sanity
-- GROQ
 - Netlify
+- Sanity
+- Vite.js
 
 ## Image
 
-![Screenshot](./assets/images/materialize-portfolio.png)
+![Screenshot](./src/assets/images/vanillajs-portfolio.png)
 
 ## Contact
 
