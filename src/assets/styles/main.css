@@ -1,0 +1,9 @@
+:root {
+    --pink-pp: #e00097;
+  }
+  
+  body {
+  background-color: var(--pink-pp);
+  color: white;
+  }
+  

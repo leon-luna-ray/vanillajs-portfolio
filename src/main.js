@@ -3,9 +3,9 @@ import {
   fetchProfile,
   fetchSkills,
   getImageUrl,
-} from './sanity';
-
-import { featuredProjectCard, projectCard, skillsCard } from './templates';
+} from '@/lib/sanity';
+import { featuredProjectCard, projectCard, skillsCard } from '@/lib/templates';
+import '@/assets/styles/main.css';
 
 const profile = await fetchProfile();
 const projects = await fetchFeaturedProjects();
