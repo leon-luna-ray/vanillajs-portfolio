@@ -1,4 +1,4 @@
-# Materialize Portfolio
+# Vanilla.js Portfolio
 
 This is my web developer portfolio buiilt with Vanilla JavaScript, HTML and CSS. It contains my bio, a list of skills, featured projects, and contact information.
 
