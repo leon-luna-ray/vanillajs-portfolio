@@ -1,13 +1,28 @@
 :root {
-    --pink-pp: #e00097;
-  }
-  
-  body {
+  --pink-pp: #e00097;
+}
+
+body {
+  background-color: white;
+  color: var(--pink-pp);
+  font-family: 'Urbanist', sans-serif;
+}
+
+.dark body {
+
   background-color: var(--pink-pp);
   color: white;
-  font-family: 'Urbanist', sans-serif;
-  }
-  
-  h1,h2, h3, h4, h5, .h1, .h2, .h3,.h4,.h5{
-    font-family: 'Bebas Neue', sans-serif;
-  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: 'Bebas Neue', sans-serif;
+}
