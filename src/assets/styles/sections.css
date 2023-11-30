@@ -16,11 +16,12 @@ footer .inner {
 #logo .name {
     font-size: 5rem;
     line-height: 4.7rem;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
 #logo .job-title {
-    font-size: 1.7rem;
+    font-size: 1.78rem;
     font-weight: 100;
     text-transform: uppercase;
 }
@@ -81,10 +82,6 @@ footer .inner {
         line-height: normal;
     }
 
-    .hero .inner {
-        /* height: 400px; */
-    }
-
     #logo .name {
         font-size: 3.5rem;
         line-height: 3rem;
@@ -92,7 +89,7 @@ footer .inner {
     }
     
     #logo .job-title {
-        font-size: 1.2rem;
+        font-size: 1.23rem;
         font-weight: 100;
         text-transform: uppercase;
     }
