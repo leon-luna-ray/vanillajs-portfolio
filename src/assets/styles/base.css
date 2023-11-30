@@ -6,10 +6,10 @@ body {
   background-color: white;
   color: var(--pink-pp);
   font-family: 'Urbanist', sans-serif;
+  margin: 0;
 }
 
 .dark body {
-
   background-color: var(--pink-pp);
   color: white;
 }
@@ -25,4 +25,34 @@ h5,
 .h4,
 .h5 {
   font-family: 'Bebas Neue', sans-serif;
+}
+
+h1, .h1{
+  font-size: 3.5rem;
+}
+h2, .h2{
+  font-size: 3rem;
+}
+h3, .h3{
+  font-size: 2.5rem;
+}
+h4, .h4{
+  font-size: 2rem;
+}
+h5, .h5{
+  font-size: 1.5rem;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
 }
