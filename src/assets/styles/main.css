@@ -1,9 +1,2 @@
-:root {
-    --pink-pp: #e00097;
-  }
-  
-  body {
-  background-color: var(--pink-pp);
-  color: white;
-  }
-  
+@import './base.css';
+@import './fonts.css';

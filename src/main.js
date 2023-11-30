@@ -88,3 +88,5 @@ if (skillLists.length) {
     skillsListsSection.insertAdjacentHTML('beforeend', markup);
   });
 }
+
+console.log(profile)
