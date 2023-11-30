@@ -1,0 +1,99 @@
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer .inner {
+    display: flex;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+#logo .name {
+    font-size: 5rem;
+    line-height: 4.7rem;
+    text-transform: uppercase;
+}
+
+#logo .job-title {
+    font-size: 1.7rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+#about-section .inner {
+    display: flex;
+    column-gap: 4rem;
+}
+
+#about-section img,
+#project-section img {
+    border: 1px solid black;
+}
+
+#about-section img {
+    border-radius: 10%;
+}
+
+
+#contact-section .links {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#contact-section .links a h5 {
+    text-decoration: none !important;
+}
+
+.hero .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.hero h1 {
+    font-size: 8rem;
+    line-height: normal;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    #about-section img {
+        border-radius: 0;
+    }
+
+    #about-section .inner {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    header .inner {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 4em;
+        line-height: normal;
+    }
+
+    .hero .inner {
+        /* height: 400px; */
+    }
+
+    #logo .name {
+        font-size: 3.5rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+    }
+    
+    #logo .job-title {
+        font-size: 1.2rem;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+}

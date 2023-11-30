@@ -1,57 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer type="module" src="/src/main.js"></script>
-    <title>Ray Luna | Developer Portfolio</title>
-  </head>
 
-  <body>
-    <header>
-      <div id="logo">
-        <span class="name">Ray Luna</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer type="module" src="/src/main.js"></script>
+  <title>Ray Luna | Developer Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <div class="container inner">
+      <div id="logo" class="flex-col-03">
+        <span class="name font-urbanist">Ray Luna</span>
         <span class="job-title"></span>
       </div>
       <nav>
-        <button id="dark-mode-btn">I/0</button>
+        <button id="dark-mode-btn" class="zoom-in-out">I/0</button>
       </nav>
-    </header>
-    <main class="container">
-      <!-- About -->
-      <section id="about-section">
+    </div>
+  </header>
+  <main class="flex-col-4">
+    <div class="hero">
+      <div class="container inner">
+        <h1 id="hero-text" class="font-reenie"></h1>
+      </div>
+    </div>
+    <!-- About -->
+    <section id="about-section">
+      <div class="container inner">
         <div id="ray-img">
           <img src="#" alt="Ray Luna profile picture" />
         </div>
-        <div id="about-info">
-          <h1>About Me</h1>
+        <div id="about-info" class="flex-col-1">
+          <h2 class="font-reenie">About Me</h2>
           <p class="about-text">
             <!-- Text injected here -->
           </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Skills -->
-      <section id="skills-section">
-        <h2 class="title-text about-title">Skills</h2>
-        <div id="skills-lists">
+    <!-- Skills -->
+    <section id="skills-section">
+      <div class="container inner flex-col-1">
+        <h2 class="font-reenie">Skills</h2>
+        <div id="skills-lists" class="grid-cols-3">
           <!-- Inject skills lists here-->
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Projects -->
-      <section id="project-section">
-        <h2>Projects</h2>
-        <!-- Inject project cards here -->
-        <div id="featured-project"></div>
-        <div id="card-grid"></div>
-      </section>
+    <!-- Projects -->
+    <section id="project-section">
+      <div class="container flex-col-2">
+        <h2 class="font-reenie">Projects</h2>
+        <div id="card-grid" class="grid-cols-2">
+          <!-- Inject project cards here -->
+        </div>
+      </div>
+    </section>
 
-      <!-- Contact -->
-      <section id="contact-section">
-        <h2>Contact</h2>
-        <div>
+    <!-- Contact -->
+    <section id="contact-section">
+      <div class="container flex-col-4">
+
+        <h2 class="font-reenie">Contact</h2>
+        <div class="links grid-cols-2">
           <a id="email-link">
             <h5>Email</h5>
             <span class="contact-link"></span>
@@ -69,10 +85,14 @@
             <span class="contact-link"></span>
           </a>
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="copyright">© Ray Luna</div>
-    </footer>
-  </body>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container inner py-2">
+      <div>© Ray Luna <span class="copyright"></span></div>
+    </div>
+  </footer>
+</body>
+
 </html>
