@@ -5,7 +5,7 @@ This is my web developer portfolio buiilt with Vanilla JavaScript, HTML and CSS.
 Site content is pulled from Sanity.io CMS and rendered dynamically with JavaScript. This updates the content automatically and keeps it up to date across all of my portfolio sites.
 
 This was an early portfolio project orginally a static website built with HTML and MaterializeCSS.
-Project URL: [https://materialize-portfolio-rldev.netlify.app/](https://materialize-portfolio-rldev.netlify.app/)
+Project URL: [https://vanillajs-portfolio-rldev.netlify.app/](https://vanillajs-portfolio-rldev.netlify.app/)
 
 ## Related Project
 dev-cms: [https://github.com/leon-luna-ray/dev-cms/](https://github.com/leon-luna-ray/dev-cms/)
