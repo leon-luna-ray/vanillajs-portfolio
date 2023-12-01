@@ -1,29 +1,6 @@
-header .inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-footer .inner {
-    display: flex;
-    justify-content: center;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-}
-
-#logo .name {
-    font-size: 5rem;
-    line-height: 4.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-#logo .job-title {
-    font-size: 1.78rem;
-    font-weight: 100;
-    text-transform: uppercase;
+.content-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 #about-section .inner {
@@ -34,6 +11,11 @@ footer .inner {
 #about-section img,
 #project-section img {
     border: 1px solid black;
+    border-radius: 5%;
+}
+
+.dark #about-section img {
+    border: 1px solid white;
 }
 
 #about-section img {
@@ -45,8 +27,15 @@ footer .inner {
     grid-template-columns: repeat(2, 1fr);
 }
 
-#contact-section .links a h5 {
+#contact-section .links a {
     text-decoration: none !important;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.dark #contact-section .links a h3 {
+    color: var(--primary);
 }
 
 .hero .inner {
@@ -60,6 +49,10 @@ footer .inner {
     font-size: 8rem;
     line-height: normal;
     text-align: center;
+}
+
+.section-title {
+    font-size: 6rem !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -77,8 +70,12 @@ footer .inner {
         padding-bottom: 2rem;
     }
 
+    .hero .inner {
+        height: 400px;
+    }
+
     .hero h1 {
-        font-size: 4em;
+        font-size: 3.5em;
         line-height: normal;
     }
 
@@ -87,10 +84,15 @@ footer .inner {
         line-height: 3rem;
         text-transform: uppercase;
     }
-    
+
     #logo .job-title {
         font-size: 1.23rem;
         font-weight: 100;
         text-transform: uppercase;
+    }
+
+    .content-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
