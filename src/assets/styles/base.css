@@ -1,11 +1,10 @@
 :root {
-  --pink-pp: #e00097;
-  --pink-pp-light: #de3ca8;
+  --primary: #e00097;
 }
 
 body {
-  background-color: white;
-  color: var(--pink-pp);
+  color: white;
+  background-color: var(--primary);
   font-family: 'Urbanist', sans-serif;
   font-size: 1.25rem;
   font-weight: 300;
@@ -13,7 +12,7 @@ body {
 }
 
 .dark body {
-  background-color: var(--pink-pp);
+  background-color: #121212;
   color: white;
 }
 
@@ -25,14 +24,14 @@ button {
   font: inherit;
   cursor: pointer;
   outline: none;
-  background-color: var(--pink-pp);
-  color: white;
+  color: var(--primary);
+  background-color: white;
   font-weight: 400;
 }
 
 .dark button {
-  background-color: white;
-  color: var(--pink-pp);
+  background-color: var(--primary);
+  color: black;
 }
 
 h1,
@@ -84,6 +83,10 @@ a:hover {
   color: black;
 }
 
+.dark a:hover {
+  color: var(--primary);
+}
+
 p {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -92,4 +95,32 @@ p {
 ul {
   list-style: none;
   padding-inline-start: 0;
+}
+
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer .inner {
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+#logo .name {
+  font-size: 5.9rem;
+  line-height: 4.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#logo .job-title {
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
 }

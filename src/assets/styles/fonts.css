@@ -1,9 +1,6 @@
 /* Bebas */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* Gloria */
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-
 /* Reenie */
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
@@ -14,15 +11,8 @@
     font-family: 'Bebas Neue', sans-serif;
 }
 
-.font-gloria {
-    font-family: 'Gloria Hallelujah', cursive;
-}
-
 .font-reenie {
     font-family: 'Reenie Beanie', cursive;
-}
-h2.font-reenie  {
-   font-size: 4.5rem;
 }
 
 .font-urbanist {
