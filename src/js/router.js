@@ -5,11 +5,10 @@ const route = (event) => {
     handleLocation();
 }
 
-const homePageUrl = new URL('@/pages/home.html', import.meta.url).href
 const routes = {
-    // 404: "/pages/404.html",
-    "/": homePageUrl,
-    // "/projects": "/pages/projects.html",
+    404: new URL('@/pages/404.html', import.meta.url).href,
+    "/": new URL('@/pages/home.html', import.meta.url).href,
+    // "/projects": new URL('@/pages/projects.html', import.meta.url).href,
 }
 
 const handleLocation = async () => {
@@ -23,4 +22,5 @@ window.onpopstate = handleLocation;
 window.route = route;
 
 handleLocation();
-console.log('router')
+
+export { route };

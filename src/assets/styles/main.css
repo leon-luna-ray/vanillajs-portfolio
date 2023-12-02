@@ -1,7 +1,7 @@
+@import './404.css';
 @import './base.css';
 @import './cards.css';
 @import './fonts.css';
-@import './main.css';
-@import './mobile.css';
-@import './sections.css';
+@import './header.css';
+@import './home.css';
 @import './utilities.css';
