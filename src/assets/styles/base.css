@@ -9,6 +9,14 @@
     /* 0 0 92px var(--primary), */
     /* 0 0 102px var(--primary), */
     0 0 151px var(--primary);
+  --neon-white: 0 0 7px white,
+    0 0 10px white,
+    0 0 21px white,
+    0 0 42px white,
+    0 0 82px white,
+    0 0 92px white,
+    0 0 102px white,
+    0 0 151px white;
 }
 
 body {
@@ -135,7 +143,6 @@ footer .inner {
 }
 
 @media screen and (max-width: 768px) {
-
   /* rm neon on mobile */
   .dark #logo .name.text-neon-pink {
     color: var(--primary);

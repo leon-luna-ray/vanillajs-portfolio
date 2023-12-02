@@ -10,7 +10,7 @@
 
 .content-section .section-title,
 #about-section h2 {
-    font-size: 6rem !important;
+    font-size: 6rem;
 }
 
 #about-section .inner {
@@ -30,11 +30,6 @@
 
 #about-section img {
     border-radius: 10%;
-}
-
-
-#contact-section .links {
-    grid-template-columns: repeat(2, 1fr);
 }
 
 #contact-section .links a {
@@ -61,11 +56,31 @@
     text-align: center;
 }
 
-.section-title {}
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.skills-list ul {
+    row-gap: 1.5rem;
+}
+
+.dark .skills-list a:hover {
+    text-shadow: var(--neon-white);
+}
+
+.dark .skills-list a:hover h3 {
+    text-shadow: var(--neon-white);
+}
+
+
 
 @media screen and (max-width: 768px) {
     #about-section img {
         border-radius: 0;
+        width: 100%;
+        border: none !important;
     }
 
     #about-section .inner {
@@ -73,13 +88,20 @@
         row-gap: 2rem;
     }
 
-    header .inner {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+    #about-section h2 {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    #project-section img {
+        border: none;
+        border-radius: 0;
+        width: 100%;
     }
 
     .hero .inner {
-        height: 400px;
+        height: auto;
+        padding-top: 3rem;
     }
 
     .hero h1 {
@@ -102,5 +124,9 @@
     .content-section {
         padding-top: 2rem;
         padding-bottom: 2rem;
+    }
+
+    #skills-lists {
+        row-gap: 4rem;
     }
 }
