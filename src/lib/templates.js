@@ -16,9 +16,9 @@ function getLinks(project) {
 function renderSkillsList(items) {
   const skills = items.map((item) => {
     if (item.website) {
-      return `<li><a href="${item.website}" target="_blank">${item.title}</a></li>`
+      return `<li><a href="${item.website}" target="_blank" class="text-primary">${item.title}</a></li>`
     }
-    return `<li><span>${item.title}</span></li>`
+    return `<li><span class="text-primary">${item.title}</span></li>`
   })
 
   return skills.length ? skills.join('\r\n') : '';
@@ -26,11 +26,13 @@ function renderSkillsList(items) {
 
 export function projectCard(project) {
   return `
-    <div class="card project">
+    <div class="project card">
       <div class="inner flex-col-1">
-        <img src="${getImageUrl(project.mainImage).size(400,400)}" alt="Screenshot of ${project.title}" class="card">
+        <div class="img-wrap">
+          <img src="${getImageUrl(project.mainImage).size(400,400)}" alt="Screenshot of ${project.title}" class="card">
+        </div>
         <div class="card-content">
-          <h3 class="sm-card-title text-primary">${project.title}</h3>
+          <h3 class="card-title text-primary">${project.title}</h3>
           <p>${project.description[0].children[0].text}</p>
         </div>
         <div class="card-action links">${getLinks(project)}</div>
@@ -41,7 +43,7 @@ export function projectCard(project) {
 export function skillsCard(list) {
   return `
     <div class="skills-list">
-      <h3 class="text-primary">${list.title}</h3>
-      <ul class="flex-col-1">${renderSkillsList(list.skills)}</ul>
+      <h3 class="text-primary text-center">${list.title}</h3>
+      <ul class="flex-col-1 text-center">${renderSkillsList(list.skills)}</ul>
     </div>`
 }
