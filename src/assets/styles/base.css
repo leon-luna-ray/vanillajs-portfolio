@@ -124,3 +124,12 @@ footer .inner {
   text-transform: uppercase;
   text-align: center;
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .dark #logo .name.text-neon-pink {
+    color: var(--primary);
+    text-shadow: none;
+  }
+}

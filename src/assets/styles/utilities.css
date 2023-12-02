@@ -64,7 +64,7 @@
   gap: 4rem
 }
 
-.text-neon-pink {
+.dark .text-neon-pink {
   color: white;
   text-shadow:
     0 0 7px var(--primary),
@@ -75,6 +75,11 @@
     0 0 92px var(--primary),
     0 0 102px var(--primary),
     0 0 151px var(--primary);
+}
+
+.dark #logo.text-neon-pink {
+  color: var(--primary);
+  text-shadow: none;
 }
 
 .text-neon-white {
