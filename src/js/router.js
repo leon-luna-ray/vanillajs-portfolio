@@ -6,8 +6,8 @@ const route = (event) => {
 }
 
 const routes = {
-    404: new URL('../pages/404.html', import.meta.url).href,
-    "/": new URL('../pages/home.html', import.meta.url).href,
+    404: new URL('@/pages/404.html', import.meta.url).href,
+    "/": new URL('@/pages/home.html', import.meta.url).href,
     // "/projects": new URL('@/pages/projects.html', import.meta.url).href,
 }
 
