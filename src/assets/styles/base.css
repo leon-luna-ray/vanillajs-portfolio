@@ -114,13 +114,13 @@ footer .inner {
 
 #logo .name {
   font-size: 5.9rem;
-  line-height: 4.7rem;
+  line-height: 5.5rem;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 #logo .job-title {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 100;
   text-transform: uppercase;
+  text-align: center;
 }
