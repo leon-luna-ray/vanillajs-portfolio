@@ -3,6 +3,16 @@
     padding-bottom: 4rem;
 }
 
+.content-section .section-title {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.content-section .section-title,
+#about-section h2 {
+    font-size: 6rem !important;
+}
+
 #about-section .inner {
     display: flex;
     column-gap: 4rem;
@@ -51,9 +61,7 @@
     text-align: center;
 }
 
-.section-title {
-    font-size: 6rem !important;
-}
+.section-title {}
 
 @media screen and (max-width: 768px) {
     #about-section img {

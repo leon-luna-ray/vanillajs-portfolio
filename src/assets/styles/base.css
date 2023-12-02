@@ -1,5 +1,14 @@
 :root {
   --primary: #e00097;
+  --neon-pink: 0 0 7px white,
+    0 0 7px var(--primary),
+    0 0 10px var(--primary),
+    0 0 21px var(--primary),
+    0 0 42px var(--primary),
+    0 0 82px var(--primary),
+    /* 0 0 92px var(--primary), */
+    /* 0 0 102px var(--primary), */
+    0 0 151px var(--primary);
 }
 
 body {
@@ -125,9 +134,9 @@ footer .inner {
   text-align: center;
 }
 
-
-
 @media screen and (max-width: 768px) {
+
+  /* rm neon on mobile */
   .dark #logo .name.text-neon-pink {
     color: var(--primary);
     text-shadow: none;
