@@ -12,14 +12,9 @@ export default defineConfig({
     //   },
     // },
   },
-  pages: {
-    '/projects': {
-      entry: 'src/pages/projects.html'
-    }
-  },
   resolve: {
     alias: {
-      '@': '/src',
+      '@': resolve(__dirname, 'src'),
     },
   },
 });
