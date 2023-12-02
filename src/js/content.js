@@ -3,8 +3,8 @@ import {
   fetchProfile,
   fetchSkills,
   getImageUrl,
-} from '@/lib/sanity';
-import { projectCard, skillsCard } from '@/lib/templates';
+} from '@/js/sanity';
+import { projectCard, skillsCard } from '@/js/templates';
 import '@/assets/styles/main.css';
 
 const profile = await fetchProfile();

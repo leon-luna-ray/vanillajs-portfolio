@@ -1,2 +1,3 @@
-import '@/lib/content';
-import '@/lib/darkMode'
+import '@/js/content';
+import '@/js/darkMode'
+import '@/js/router';

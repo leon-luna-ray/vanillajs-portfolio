@@ -109,18 +109,6 @@
         line-height: normal;
     }
 
-    #logo .name {
-        font-size: 3.5rem;
-        line-height: 3rem;
-        text-transform: uppercase;
-    }
-
-    #logo .job-title {
-        font-size: 1.23rem;
-        font-weight: 100;
-        text-transform: uppercase;
-    }
-
     .content-section {
         padding-top: 2rem;
         padding-bottom: 2rem;

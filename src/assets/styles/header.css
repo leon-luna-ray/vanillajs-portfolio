@@ -1,0 +1,47 @@
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+a#logo {
+    text-decoration: none;
+}
+
+a#logo:hover {
+    color: inherit;
+}
+
+#logo .name {
+    font-size: 5.9rem;
+    line-height: 5.5rem;
+    font-weight: 600;
+}
+
+#logo .job-title {
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .dark #logo .name.text-neon-pink {
+        color: var(--primary);
+        text-shadow: none;
+    }
+
+    #logo .name {
+        font-size: 3.5rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+    }
+
+    #logo .job-title {
+        font-size: 0.875rem;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+}

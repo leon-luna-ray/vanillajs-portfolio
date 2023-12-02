@@ -1,4 +1,4 @@
-import { getImageUrl } from '@/lib/sanity';
+import { getImageUrl } from '@/js/sanity';
 
 function getLinks(project) {
   const links = [];
