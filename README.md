@@ -7,6 +7,8 @@ Site content is pulled from Sanity.io CMS and rendered dynamically with JavaScri
 This was an early portfolio project orginally a static website built with HTML and MaterializeCSS.
 Project URL: [https://vanillajs-portfolio-rldev.netlify.app/](https://vanillajs-portfolio-rldev.netlify.app/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6bbc7685-2596-4d5a-a925-a376d30f1010/deploy-status)](https://app.netlify.com/sites/vanillajs-portfolio-rldev/deploys)
+
 ## Related Project
 dev-cms: [https://github.com/leon-luna-ray/dev-cms/](https://github.com/leon-luna-ray/dev-cms/)
 

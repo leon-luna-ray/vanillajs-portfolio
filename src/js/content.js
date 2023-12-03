@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const copyrightText = document.createTextNode(year);
 
   document.querySelector('.copyright').appendChild(copyrightText);
-  console.log(profile)
   if (profile) {
     if (profile.bio) {
       document.querySelector(
