@@ -1,4 +1,4 @@
-import { getImageUrl } from '@/js/sanity';
+import { getImageUrl, portableTextToHTML } from '@/js/sanity';
 
 function getLinks(project) {
   const links = [];
@@ -33,7 +33,7 @@ export function projectCard(project) {
         </div>
         <div class="card-content">
           <h3 class="card-title text-primary">${project.title}</h3>
-          <p>${project.description[0].children[0].text}</p>
+          <p>${project.intro}</p>
         </div>
         <div class="card-action links">${getLinks(project)}</div>
       </div>

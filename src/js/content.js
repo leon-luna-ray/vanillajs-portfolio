@@ -3,13 +3,15 @@ import {
   fetchProfile,
   fetchSkills,
   getImageUrl,
+  fetchProjectGroup,
 } from '@/js/sanity';
 import { projectCard, skillsCard } from '@/js/templates';
 import '@/assets/styles/main.css';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const profile = await fetchProfile();
-  const projects = await fetchFeaturedProjects();
+  // const projects = await fetchFeaturedProjects();
+  const projects = await fetchProjectGroup('frontend-projects');
   const skillLists = await fetchSkills();
 
   const grid = document.getElementById('card-grid');
@@ -68,8 +70,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  if (projects.length) {
-    projects.forEach((project, index) => {
+  if (projects?.projects.length) {
+    // console.log(test);
+    projects.projects.forEach((project, index) => {
       const card = projectCard(project);
 
       grid.insertAdjacentHTML('beforeend', card);

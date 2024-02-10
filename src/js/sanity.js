@@ -14,6 +14,10 @@ export function getImageUrl(source) {
   return builder.image(source);
 }
 
+export function portableTextToHTML(portableTextBlocks) {
+  return toHTML(portableTextBlocks)
+}
+
 export async function fetchProfile() {
   const query = `*[_type == "profileDetails"][0]`;
   const profile = await client.fetch(query);
@@ -33,4 +37,33 @@ export async function fetchSkills() {
   const skills = await client.fetch(query);
 
   return skills;
+}
+
+export async function fetchProjectGroup(slug) {
+  const query = `*[_type == "projectGroup" && slug.current == "${slug}"] | order(title asc) {
+    _id,
+    title,
+    slug,
+    description,
+    projects[]->{
+      _id, 
+      intro, 
+      "mainImage": mainImage.asset->{
+        _id,
+        title,
+        altText,
+        description,
+      }, 
+      slug, 
+      status, 
+      title, 
+      technologies[]->{_id, title, slug,},
+      url,
+      customUrl,
+    },
+  }`;
+
+  const projectGroup = await client.fetch(query);
+
+  return projectGroup[0];
 }
