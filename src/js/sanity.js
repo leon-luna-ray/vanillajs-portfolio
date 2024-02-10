@@ -1,5 +1,6 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
+import { toHTML } from '@portabletext/to-html';
 
 export const client = createClient({
   projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
@@ -19,7 +20,15 @@ export function portableTextToHTML(portableTextBlocks) {
 }
 
 export async function fetchProfile() {
-  const query = `*[_type == "profileDetails"][0]`;
+  const query = `*[_type == "profileDetails"][0]{
+    ...,
+    "image": image.asset->{
+      _id,
+      title,
+      altText,
+      description,
+    },
+  }`;
   const profile = await client.fetch(query);
 
   return profile;

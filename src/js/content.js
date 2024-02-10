@@ -7,6 +7,7 @@ import {
 } from '@/js/sanity';
 import { projectCard, skillsCard } from '@/js/templates';
 import '@/assets/styles/main.css';
+import { portableTextToHTML } from './sanity';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const profile = await fetchProfile();
@@ -64,14 +65,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       const profileImageSrc = getImageUrl(profile?.image).size(300, 300).url();
 
       document.querySelector('#about-section #ray-img img').src = profileImageSrc;
+      document.querySelector('#about-section #ray-img img').alt = profile?.image?.altText || 'Profile picture';
     }
     if (profile.greeting) {
       document.querySelector('#hero-text').textContent = profile.greeting;
     }
   }
 
-  if (projects?.projects.length) {
+  if (projects) {
     // console.log(test);
+    document.querySelector('#projects-intro').innerHTML = portableTextToHTML(projects?.description);
     projects.projects.forEach((project, index) => {
       const card = projectCard(project);
 

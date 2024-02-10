@@ -29,7 +29,7 @@ export function projectCard(project) {
     <div class="project card">
       <div class="inner flex-col-1">
         <div class="img-wrap">
-          <img src="${getImageUrl(project.mainImage).size(400,400)}" alt="Screenshot of ${project.title}" class="card">
+          <img src="${getImageUrl(project.mainImage).size(400,400)}" alt="${project.mainImage.altText || 'App screenshot'}" class="card">
         </div>
         <div class="card-content">
           <h3 class="card-title text-primary">${project.title}</h3>
