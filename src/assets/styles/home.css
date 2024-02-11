@@ -5,7 +5,6 @@
 
 .content-section .section-title {
     text-align: center;
-    padding-bottom: 2rem;
 }
 
 .content-section .section-title,
@@ -27,7 +26,9 @@
 .dark #about-section img {
     border: 1px solid white;
 }
-
+#projects-intro {
+    text-align: center;
+}
 #about-section img {
     border-radius: 10%;
 }
