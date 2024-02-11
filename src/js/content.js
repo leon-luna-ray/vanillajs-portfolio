@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   if (projects) {
-    // console.log(test);
     document.querySelector('#projects-intro').innerHTML = portableTextToHTML(projects?.description);
     projects.projects.forEach((project, index) => {
       const card = projectCard(project);
