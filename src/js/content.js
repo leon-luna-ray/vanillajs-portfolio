@@ -1,16 +1,19 @@
 import {
-  fetchFeaturedProjects,
+  fetchHomePage,
   fetchProfile,
   fetchSkills,
   getImageUrl,
   fetchProjectGroup,
+  portableTextToHTML
 } from '@/js/sanity';
 import { projectCard, skillsCard } from '@/js/templates';
 import '@/assets/styles/main.css';
-import { portableTextToHTML } from './sanity';
+// import { fetchHomePage, portableTextToHTML } from './sanity';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const profile = await fetchProfile();
+  const data = await fetchHomePage();
+  console.log(data);
+  // const profile = await fetchProfile();
   // const projects = await fetchFeaturedProjects();
   const projects = await fetchProjectGroup('frontend-projects');
   const skillLists = await fetchSkills();
@@ -22,53 +25,53 @@ document.addEventListener('DOMContentLoaded', async () => {
   const copyrightText = document.createTextNode(year);
 
   document.querySelector('.copyright').appendChild(copyrightText);
-  if (profile) {
-    if (profile.bio) {
+  if (data?.profile) {
+    if (data?.profile.bio) {
       document.querySelector(
         '#about-section #about-info .about-text'
-      ).textContent = profile.bio;
+      ).textContent = data?.profile.bio;
     }
-    if (profile.email) {
-      const mailto = `mailto:${profile.email}`;
+    if (data?.profile.email) {
+      const mailto = `mailto:${data?.profile.email}`;
 
       document.querySelector('#email-link').href = mailto;
       document.querySelector('#email-link .contact-link').textContent =
-        profile.email;
+        data?.profile.email;
 
       document.querySelector('#email-link').classList.remove('hide');
     }
-    if (profile.github) {
-      document.querySelector('#github-link').href = profile.github;
+    if (data?.profile.github) {
+      document.querySelector('#github-link').href = data?.profile.github;
       document.querySelector('#github-link .contact-link').textContent =
-        profile.github_user || 'Github';
+        data?.profile.github_user || 'Github';
 
       document.querySelector('#github-link').classList.remove('hide');
     }
-    if (profile.linkedin) {
-      document.querySelector('#linkedin-link').href = profile.linkedin;
+    if (data?.profile.linkedin) {
+      document.querySelector('#linkedin-link').href = data?.profile.linkedin;
       document.querySelector('#linkedin-link .contact-link').textContent =
-        profile.linkedin_user || 'Profile';
+        data?.profile.linkedin_user || 'Profile';
       document.querySelector('#linkedin-link').classList.remove('hide');
     }
-    if (profile.title) {
-      const title = document.createTextNode(profile.title);
+    if (data?.profile.title) {
+      const title = document.createTextNode(data?.profile.title);
 
       document.querySelector('#logo .job-title').append(title);
     }
-    if (profile.website) {
-      document.querySelector('#website-link').href = profile.website;
+    if (data?.profile.website) {
+      document.querySelector('#website-link').href = data?.profile.website;
       document.querySelector('#website-link .contact-link').textContent =
-        profile.website_name || 'Link';
+        data?.profile.website_name || 'Link';
       document.querySelector('#website-link').classList.remove('hide');
     }
-    if (profile.image) {
-      const profileImageSrc = getImageUrl(profile?.image).size(300, 300).url();
+    if (data?.profile.image) {
+      const profileImageSrc = getImageUrl(data?.profile.image).size(300, 300).url();
 
       document.querySelector('#about-section #ray-img img').src = profileImageSrc;
-      document.querySelector('#about-section #ray-img img').alt = profile?.image?.altText || 'Profile picture';
+      document.querySelector('#about-section #ray-img img').alt = data?.profile.image.altText || 'Profile picture';
     }
-    if (profile.greeting) {
-      document.querySelector('#hero-text').textContent = profile.greeting;
+    if (data?.profile.greeting) {
+      document.querySelector('#hero-text').textContent = data?.profile.greeting;
     }
   }
 

@@ -76,3 +76,25 @@ export async function fetchProjectGroup(slug) {
 
   return projectGroup[0];
 }
+
+// Queries
+// const queryGlobalSettings = `*[_type == "globalSettings"][0]`
+
+const queryProfile = `*[_type == "profileDetails"][0]{
+    ...,
+    "image": image.asset->{
+      _id,
+      title,
+      altText,
+      description,
+    }
+  }`
+
+export async function fetchHomePage() {
+  const query = `{
+      "profile": ${queryProfile},
+  }`;
+  const data = await client.fetch(query);
+
+  return data;
+}
