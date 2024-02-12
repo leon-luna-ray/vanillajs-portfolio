@@ -1,22 +1,13 @@
 import {
   fetchHomePage,
-  fetchProfile,
-  fetchSkills,
   getImageUrl,
-  fetchProjectGroup,
   portableTextToHTML
 } from '@/js/sanity';
 import { projectCard, skillsCard } from '@/js/templates';
 import '@/assets/styles/main.css';
-// import { fetchHomePage, portableTextToHTML } from './sanity';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const data = await fetchHomePage();
-  console.log(data);
-  // const profile = await fetchProfile();
-  // const projects = await fetchFeaturedProjects();
-  const projects = await fetchProjectGroup('frontend-projects');
-  const skillLists = await fetchSkills();
 
   const grid = document.getElementById('card-grid');
   const skillsListsSection = document.getElementById('skills-lists');
@@ -75,17 +66,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  if (projects) {
-    document.querySelector('#projects-intro').innerHTML = portableTextToHTML(projects?.description);
-    projects.projects.forEach((project, index) => {
+  if (data?.projects) {
+    document.querySelector('#projects-intro').innerHTML = portableTextToHTML(data?.projects.description);
+    data?.projects.projects.forEach((project, index) => {
       const card = projectCard(project);
 
       grid.insertAdjacentHTML('beforeend', card);
     });
   }
 
-  if (skillLists.length) {
-    skillLists.forEach((list) => {
+  if (data?.skillsGroups.length) {
+    data?.skillsGroups.forEach((list) => {
       const markup = skillsCard(list);
 
       skillsListsSection.insertAdjacentHTML('beforeend', markup);
