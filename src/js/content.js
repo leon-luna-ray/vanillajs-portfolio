@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const data = await fetchHomePage();
   const pageURL = window.location.href;
 
+  console.log(data);
+
   const grid = document.getElementById('card-grid');
   const skillsListsSection = document.getElementById('skills-lists');
 
