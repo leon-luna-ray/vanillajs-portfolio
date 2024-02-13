@@ -1,3 +1,4 @@
+import { addSEOTags } from './meta';
 import {
   fetchHomePage,
   getImageUrl,
@@ -8,7 +9,7 @@ import '@/assets/styles/main.css';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const data = await fetchHomePage();
-  console.log(data);
+  const pageURL = window.location.href;
 
   const grid = document.getElementById('card-grid');
   const skillsListsSection = document.getElementById('skills-lists');
@@ -50,11 +51,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         data?.profile.linkedin_user || 'Profile';
       document.querySelector('#linkedin-link').classList.remove('hide');
     }
-    // if (data?.profile.title) {
-    //   const title = document.createTextNode(data?.profile.title);
-
-    //   document.querySelector('#logo .job-title').append(title);
-    // }
     if (data?.profile.website) {
       document.querySelector('#website-link').href = data?.profile.website;
       document.querySelector('#website-link .contact-link').textContent =
@@ -72,6 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  // Projects
   if (data?.projects) {
     data?.projects.projects.forEach((project, index) => {
       const card = projectCard(project);
@@ -88,6 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   }
 
+  // Skills
   if (data?.page?.skillsSection?.title) {
     document.querySelector('#skills-section .section-title').textContent = data.page.skillsSection.title;
 
@@ -102,11 +100,18 @@ document.addEventListener('DOMContentLoaded', async () => {
       skillsListsSection.insertAdjacentHTML('beforeend', markup);
     });
   }
+
+  // Contact
   if (data?.page?.contactSection?.title) {
     document.querySelector('#contact-section .section-title').textContent = data?.page?.contactSection?.title;
   }
   if (data?.page?.contactSection?.body) {
     document.querySelector('#contact-section .section-body').innerHTML = portableTextToHTML(data.page.contactSection.body);
+  }
+
+  // SEO
+  if (data) {
+    addSEOTags(data.global.title, data.page.seoDescription, pageURL, getImageUrl(data.page.seoImage))
   }
 })
 
