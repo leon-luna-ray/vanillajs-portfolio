@@ -25,7 +25,6 @@ function renderSkillsList(items) {
 }
 
 export function projectCard(project) {
-  console.log(project);
   return `
     <li class="project card">
       <div class="inner flex-col-1">

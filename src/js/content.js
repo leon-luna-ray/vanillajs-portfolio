@@ -19,6 +19,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.querySelector('.copyright').appendChild(copyrightText);
 
+  // SEO
+  if (data) {
+    const appElement = document.getElementById('app');
+    appElement.classList.remove('hidden');
+    appElement.classList.add('fade-in');
+  
+    // Add a delay before making the content visible
+    setTimeout(() => {
+      appElement.classList.add('visible');
+    }, 100);
+
+    addSEOTags(data.global.title, data.page.seoDescription, pageURL, getImageUrl(data.page.seoImage))
+  }
+
   if (data?.page?.aboutSection?.title) {
     document.querySelector('#about-info .section-title').textContent = data.page.aboutSection.title;
   }
@@ -109,9 +123,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.querySelector('#contact-section .section-body').innerHTML = portableTextToHTML(data.page.contactSection.body);
   }
 
-  // SEO
-  if (data) {
-    addSEOTags(data.global.title, data.page.seoDescription, pageURL, getImageUrl(data.page.seoImage))
-  }
+
 })
 
