@@ -7,6 +7,16 @@ import {
 import { projectCard, skillsCard } from '@/js/templates';
 import '@/assets/styles/main.css';
 
+function fadeInContent() {
+  const appElement = document.getElementById('app');
+  appElement.classList.remove('hidden');
+  appElement.classList.add('fade-in');
+
+  setTimeout(() => {
+    appElement.classList.add('visible');
+  }, 100);
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const data = await fetchHomePage();
   const pageURL = window.location.href;
@@ -21,16 +31,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // SEO
   if (data) {
-    const appElement = document.getElementById('app');
-    appElement.classList.remove('hidden');
-    appElement.classList.add('fade-in');
-  
-    // Add a delay before making the content visible
-    setTimeout(() => {
-      appElement.classList.add('visible');
-    }, 100);
-
-    addSEOTags(data.global.title, data.page.seoDescription, pageURL, getImageUrl(data.page.seoImage))
+    fadeInContent();
+    addSEOTags(data.global.title, data.page.seoDescription, pageURL, getImageUrl(data.page.seoImage));
   }
 
   if (data?.page?.aboutSection?.title) {
