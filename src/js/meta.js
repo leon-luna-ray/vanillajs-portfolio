@@ -1,5 +1,4 @@
 export function addSEOTags(title, description, url, imageUrl) {
-    // Create meta tags
     const metaTags = [
         { name: 'title', content: title },
         { name: 'description', content: description },
@@ -15,7 +14,6 @@ export function addSEOTags(title, description, url, imageUrl) {
         { property: 'twitter:image', content: imageUrl }
     ];
 
-    // Append meta tags to the head element
     const head = document.head;
     metaTags.forEach(tag => {
         const metaTag = document.createElement('meta');
@@ -25,7 +23,6 @@ export function addSEOTags(title, description, url, imageUrl) {
         head.appendChild(metaTag);
     });
 
-    // Create canonical link tag
     const canonicalLink = document.createElement('link');
     canonicalLink.setAttribute('rel', 'canonical');
     canonicalLink.setAttribute('href', url);
