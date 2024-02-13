@@ -23,6 +23,15 @@ export function portableTextToHTML(portableTextBlocks) {
 // API Queries
 const queryGlobalSettings = `*[_type == "globalSettings"][0]`
 const querySkillsGroups = `*[_type == "skillsList"] | order(title) {title, "skills" : skills[] -> {title, website}}`;
+const queryPageType = (type, slug) => `*[_type == '${type}' && slug.current == '${slug}']{
+  ...,
+  "seoImage": seoImage.asset -> {
+    _id,
+    title,
+    altText,
+    description
+  }
+}[0]`;
 const queryProfile = `*[_type == "profileDetails"][0]{
     ...,
     "image": image.asset->{
@@ -60,6 +69,7 @@ export async function fetchHomePage() {
   const query = `{
       "global": ${queryGlobalSettings},
       "profile": ${queryProfile},
+      "page": ${queryPageType('homePage', 'vanillajs-portfolio-home')},
       "projects": ${queryProjectGroup('vanillajs-portfolio')},
       "skillsGroups": ${querySkillsGroups}
   }`;
