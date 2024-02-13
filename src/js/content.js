@@ -12,9 +12,9 @@ function fadeInContent() {
   appElement.classList.remove('hidden');
   appElement.classList.add('fade-in');
 
-  // setTimeout(() => {
+  setTimeout(function () {
     appElement.classList.add('visible');
-  // }, 100);
+  }, 50);
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
