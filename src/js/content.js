@@ -1,3 +1,4 @@
+import { addSEOTags } from './meta';
 import {
   fetchHomePage,
   getImageUrl,
@@ -8,6 +9,7 @@ import '@/assets/styles/main.css';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const data = await fetchHomePage();
+  const pageURL = window.location.href;
 
   const grid = document.getElementById('card-grid');
   const skillsListsSection = document.getElementById('skills-lists');
@@ -16,12 +18,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   const copyrightText = document.createTextNode(year);
 
   document.querySelector('.copyright').appendChild(copyrightText);
+
+  if (data?.page?.aboutSection?.title) {
+    document.querySelector('#about-info .section-title').textContent = data.page.aboutSection.title;
+  }
+  if (data?.page?.aboutSection?.body) {
+    document.querySelector(
+      '#about-section #about-info .about-text'
+    ).innerHTML = portableTextToHTML(data.page.aboutSection.body);
+  }
   if (data?.profile) {
-    if (data?.profile.bio) {
-      document.querySelector(
-        '#about-section #about-info .about-text'
-      ).textContent = data?.profile.bio;
-    }
+
     if (data?.profile.email) {
       const mailto = `mailto:${data?.profile.email}`;
 
@@ -44,11 +51,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         data?.profile.linkedin_user || 'Profile';
       document.querySelector('#linkedin-link').classList.remove('hide');
     }
-    if (data?.profile.title) {
-      const title = document.createTextNode(data?.profile.title);
-
-      document.querySelector('#logo .job-title').append(title);
-    }
     if (data?.profile.website) {
       document.querySelector('#website-link').href = data?.profile.website;
       document.querySelector('#website-link .contact-link').textContent =
@@ -61,20 +63,36 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.querySelector('#about-section #ray-img img').src = profileImageSrc;
       document.querySelector('#about-section #ray-img img').alt = data?.profile.image.altText || 'Profile picture';
     }
-    if (data?.profile.greeting) {
-      document.querySelector('#hero-text').textContent = data?.profile.greeting;
+    if (data?.page.heroSection.intro) {
+      document.querySelector('#hero-text').textContent = data?.page.heroSection.intro;
     }
   }
 
+  // Projects
   if (data?.projects) {
-    document.querySelector('#projects-intro').innerHTML = portableTextToHTML(data?.projects.description);
     data?.projects.projects.forEach((project, index) => {
       const card = projectCard(project);
 
       grid.insertAdjacentHTML('beforeend', card);
     });
   }
+  if (data?.page?.projectsSection?.title) {
+    document.querySelector('#project-section .section-title').textContent = data.page.projectsSection.title;
 
+  }
+  if (data?.page?.projectsSection?.body) {
+    document.querySelector('#project-section .section-body').innerHTML = portableTextToHTML(data.page.projectsSection.body);
+
+  }
+
+  // Skills
+  if (data?.page?.skillsSection?.title) {
+    document.querySelector('#skills-section .section-title').textContent = data.page.skillsSection.title;
+
+  }
+  if (data?.page?.skillsSection?.body) {
+    document.querySelector('#skills-section .section-body').innerHTML = portableTextToHTML(data.page.skillsSection.body);
+  }
   if (data?.skillsGroups.length) {
     data?.skillsGroups.forEach((list) => {
       const markup = skillsCard(list);
@@ -82,4 +100,18 @@ document.addEventListener('DOMContentLoaded', async () => {
       skillsListsSection.insertAdjacentHTML('beforeend', markup);
     });
   }
+
+  // Contact
+  if (data?.page?.contactSection?.title) {
+    document.querySelector('#contact-section .section-title').textContent = data?.page?.contactSection?.title;
+  }
+  if (data?.page?.contactSection?.body) {
+    document.querySelector('#contact-section .section-body').innerHTML = portableTextToHTML(data.page.contactSection.body);
+  }
+
+  // SEO
+  if (data) {
+    addSEOTags(data.global.title, data.page.seoDescription, pageURL, getImageUrl(data.page.seoImage))
+  }
 })
+
