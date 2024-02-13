@@ -60,6 +60,8 @@ const queryProjectGroup = (slug) => {
         status, 
         title, 
         technologies[]->{_id, title, slug,},
+        url,
+        repository,
       },
     }[0]`;
 }

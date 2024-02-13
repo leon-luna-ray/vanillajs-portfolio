@@ -26,7 +26,7 @@ function renderSkillsList(items) {
 
 export function projectCard(project) {
   return `
-    <div class="project card">
+    <li class="project card">
       <div class="inner flex-col-1">
         <div class="img-wrap">
           <img src="${getImageUrl(project.mainImage).size(400,400)}" alt="${project.mainImage.altText || 'App screenshot'}" class="card">
@@ -37,7 +37,7 @@ export function projectCard(project) {
         </div>
         <div class="card-action links">${getLinks(project)}</div>
       </div>
-    </div>`;
+    </li>`;
 }
 
 export function skillsCard(list) {

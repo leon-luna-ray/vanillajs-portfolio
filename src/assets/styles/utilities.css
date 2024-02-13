@@ -86,7 +86,18 @@
   transform: scale(1.02);
 }
 
+.hidden {
+  display: none;
+}
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
 
 @media screen and (max-width: 768px) {
   .container {
